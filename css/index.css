@@ -1,0 +1,77 @@
+
+body {
+	margin: 0;
+	font-family: Ubuntu;
+	color: white;
+	background-size: cover;
+}
+
+header {
+	padding-left: 2em;
+	padding-top: 2em;
+}
+
+header img {
+	width: 3em;
+	display: inline-block;
+	/* transiciones */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+header img:hover{
+	filter: invert(100%);
+	-webkit-filter: invert(100%);  
+	/* transiciones */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+center#content {
+	margin-top: 5em;
+}
+
+div#app_container {
+	width: 18em;
+	display: inline-block;
+}
+
+div#app_container a {
+	color: white;
+	text-decoration: none;
+}
+
+div#app_container a:link {
+	color: white;
+}
+
+div#app_container img {
+	width: 10em;
+	/* transiciones */
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+
+div#app_container:hover img {
+	width: 11em;
+	/* transiciones */
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+
+footer {
+    margin-top: 10em;
+    opacity: 0.8;
+}

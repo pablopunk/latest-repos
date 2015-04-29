@@ -1,100 +1,46 @@
-<!DOCTYPE html>
-
 <html>
+
 <head>
-	<title>Página en construcción</title>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"/>
-
-	<style type="text/css">
-	
-	body {
-		margin: 0px;
-		font-family: Ubuntu;
-		background-image: url(img/fondo.jpg);
-		background-repeat: no-repeat;
-		background-height: 100%;
-	}
-	
-	div#center {
-		padding-top: 220px;
-		text-align: center;
-		width: 100%;
-		white-space: nowrap; /* Redimension de ventana */
-	}
-	
-	div#center li {
-		display: inline;
-		list-style-type: none;
-		position: relative;		margin: 30px;
-		padding-left: 14px;
-		padding-right: 10px;
-		padding-bottom: 30px;
-		padding-top: 100px;
-		border-radius: 20px;
-	}	
-	
-	div#center li p {
-		display: none;
-	}
-	
-	div#center li:hover p{
-		display: inline;
-		position: absolute;
-		margin-top: 110px;
-		width: 100px;
-		text-align: center;
-		color: white;
-	}
-	
-	div#center li:hover {
-		background-color: rgba(0, 0, 0, 0.25);
-	}
-	
-	div#center img {
-		width: 100px;
-	}
-
-	img#webstarterkit-logo {
-		width: 100px;
-		margin-top: 200px;
-		margin-left: 20px;
-		border-radius: 5px;
-		box-shadow: 5px 5px 8px black;
-	}
-	
-	img#webstarterkit-logo:hover {
-		box-shadow: 2px 2px 4px black;
-	}
-
-	</style>
-
+	<meta charset="utf-8">
+	<title>pablopunk</title>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular&subset=Latin,Cyrillic">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
-<body>
 
-	<div id="center">
-		<li id="facebook" onclick="window.open('https://facebook.com/pablovarela12')">
-			<p>Facebook</p>
-			<img src="img/facebook.png"/>
-		</li>
-		<li id="twitter" onclick="window.open('https://twitter.com/pablopunk')">
-			<p>Twitter</p>
-			<img src="img/twitter.png"/>
-		</li>
-		<li id="youtube" onclick="window.open('https://youtube.com/varelapol13')">
-			<p>YouTube</p>
-			<img src="img/youtube.png"/>
-		</li>
-		<li id="instagram" onclick="window.open('https://instagram.com/pablopunk')">
-			<p>Instagram</p>
-			<img src="img/instagram.png"/>
-		</li>
-	</div>
+<body background="img/fondo.jpg">
 
-	<section id="enlace_webstarterkit">
-		<a href="WebStarterKit-example/index.html">
-			<img id="webstarterkit-logo" src="img/web-starter-kit-logo.jpg">
+	<header>
+		<a href="/index.html">
+			<img src="img/logo.png">
 		</a>
-	</section>
-</body> </html>
+	</header>
 
+	<center id="content">
+
+		<div id="app_container">
+			<a href="apps/index.html">
+				<img src="img/apps.png"/>
+				<h3>iOS Apps</h3>
+			</a>
+		</div>
+
+		<div id="app_container">
+			<a href="http://github.com/pablopunk">
+				<img src="img/github.png"/>
+				<h3>GitHub</h3>
+			</a>
+		</div>
+
+		<div id="app_container">
+			<a href="blog/index.php">
+				<img src="img/wordpress.png"/>
+				<h3>Blog</h3>
+			</a>
+		</div>
+
+
+		<footer>© Pablo Varela 2015</footer>
+	</center>
+
+</body>
+</html>
