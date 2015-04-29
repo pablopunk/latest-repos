@@ -73,5 +73,6 @@ div#app_container:hover img {
 
 footer {
     margin-top: 10em;
+    margin-bottom: 10em;
     opacity: 0.8;
 }
