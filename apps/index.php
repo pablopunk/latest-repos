@@ -1,16 +1,17 @@
+
+<?php $root = $_SERVER['DOCUMENT_ROOT']; ?>
+
 <html>
 
 <head>
-	<meta charset="utf-8">
+
 	<title>My apps</title>
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular&subset=Latin,Cyrillic">
-	<link rel="stylesheet" type="text/css" href="../css/index.css" />
-</head>
+	<?php include $root.'/head.php';?>
 
 <body background="../img/fondo.jpg">
 
 	<header>
-		<a href="/index.html">
+		<a href="/index.php">
 			<img src="../img/logo.png">
 		</a>
 	</header>
@@ -33,7 +34,9 @@
 			</a>
 		</div>
 
-		<footer>© Pablo Varela 2015</footer>
+		<footer>
+			<?php include $root.'/footer.php';?>
+		</footer>
 	</center>
 
 </body>

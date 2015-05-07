@@ -1,16 +1,19 @@
+
+<?php $root = $_SERVER['DOCUMENT_ROOT']; ?>
+
 <html>
 
 <head>
-	<meta charset="utf-8">
+	
 	<title>pablopunk</title>
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular&subset=Latin,Cyrillic">
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<?php include $root.'/head.php';?>
+	
 </head>
 
 <body background="img/fondo.jpg">
 
 	<header>
-		<a href="/index.html">
+		<a href="/index.php">
 			<img src="img/logo.png">
 		</a>
 	</header>
@@ -18,7 +21,7 @@
 	<center id="content">
 
 		<div id="app_container">
-			<a href="apps/index.html">
+			<a href="apps/index.php">
 				<img src="img/apps.png"/>
 				<h3>iOS Apps</h3>
 			</a>
@@ -39,7 +42,9 @@
 		</div>
 
 
-		<footer>© Pablo Varela 2015</footer>
+		<footer>
+			<?php include $root.'/footer.php';?>
+		</footer>
 	</center>
 
 </body>
