@@ -4,10 +4,10 @@
 <html>
 
 <head>
-	
+
 	<title>pablopunk</title>
 	<?php include $root.'/head.php';?>
-	
+
 </head>
 
 <body background="img/fondo.jpg">
@@ -24,6 +24,13 @@
 			<a href="apps/index.php">
 				<img src="img/apps.png"/>
 				<h3>iOS Apps</h3>
+			</a>
+		</div>
+
+		<div id="app_container">
+			<a href="pebble/index.php">
+				<img src="img/pebble.png"/>
+				<h3>Pebble Watchfaces</h3>
 			</a>
 		</div>
 
