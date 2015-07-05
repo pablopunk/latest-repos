@@ -21,9 +21,23 @@
 		<h2 style="color: #00ffff">My Pebble watchfaces</h2>
 
 		<div id="app_container">
-			<a href="https://github.com/pablopunk/pebble-watchfaces/tree/master/zebrahead_face/build">
-				<img src="../img/zhface.png"/>
-				<h3>Zebrahead face</h3>
+			<a href="https://twitter.com/pablopunk">
+				<img src="../img/twitter.png"/>
+				<h3>Twitter</h3>
+			</a>
+		</div>
+
+		<div id="app_container">
+			<a href="https://instagram.com/pablopunk">
+				<img src="../img/instagram.png"/>
+				<h3>Instagram</h3>
+			</a>
+		</div>
+
+		<div id="app_container">
+			<a href="https://youtube.com/varelapol13">
+				<img src="../img/youtube.png"/>
+				<h3>YouTube</h3>
 			</a>
 		</div>
 

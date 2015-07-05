@@ -42,6 +42,13 @@
 		</div>
 
 		<div id="app_container">
+			<a href="social/index.php">
+				<img src="img/social.png"/>
+				<h3>Social</h3>
+			</a>
+		</div>
+
+		<div id="app_container">
 			<a href="blog/index.php">
 				<img src="img/wordpress.png"/>
 				<h3>Blog</h3>
