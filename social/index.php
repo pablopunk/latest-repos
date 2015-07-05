@@ -5,7 +5,7 @@
 
 <head>
 
-	<title>My Pebble watchfaces</title>
+	<title>Social Networks</title>
 	<?php include $root.'/head.php';?>
 
 <body background="../img/fondo.jpg">
@@ -18,7 +18,7 @@
 
 	<center id="content">
 
-		<h2 style="color: #00ffff">My Pebble watchfaces</h2>
+		<h2 style="color: #00ffff">Social Networks</h2>
 
 		<div id="app_container">
 			<a href="https://twitter.com/pablopunk">
