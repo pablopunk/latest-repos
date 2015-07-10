@@ -27,6 +27,13 @@
 			</a>
 		</div>
 
+		<div id="app_container">
+			<a href="https://github.com/pablopunk/pebble-watchfaces/tree/master/minimal_bars">
+				<img src="../img/bars.png"/>
+				<h3>Minimal bars</h3>
+			</a>
+		</div>
+
 		<footer>
 			<?php include $root.'/footer.php';?>
 		</footer>
