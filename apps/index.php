@@ -18,7 +18,7 @@
 
 	<center id="content">
 
-		<h2 style="color: #00ffff">My iOS apps</h2>
+		<h2 style="color: #00ffff">My apps</h2>
 
 		<div id="app_container">
 			<a href="https://github.com/pablopunk/Color-Do">
@@ -31,6 +31,13 @@
 			<a href="https://github.com/pablopunk/SimpleCamera">
 				<img src="../img/camera.png"/>
 				<h3>Simple Camera (coming soon)</h3>
+			</a>
+		</div>
+
+		<div id="app_container">
+			<a href="http://www.github.com/pablopunk/chronocube">
+				<img src="../img/chronocube.png"/>
+				<h3>Chronocube</h3>
 			</a>
 		</div>
 

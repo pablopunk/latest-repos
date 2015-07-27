@@ -23,7 +23,7 @@
 		<div id="app_container">
 			<a href="apps/index.php">
 				<img src="img/apps.png"/>
-				<h3>iOS Apps</h3>
+				<h3>Apps</h3>
 			</a>
 		</div>
 

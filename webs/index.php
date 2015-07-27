@@ -27,13 +27,6 @@
 			</a>
 		</div>
 
-		<div id="app_container">
-			<a href="http://www.github.com/pablopunk/chronocube">
-				<img src="../img/chronocube.png"/>
-				<h3>Chronocube App</h3>
-			</a>
-		</div>
-
 		<footer>
 			<?php include $root.'/footer.php';?>
 		</footer>
