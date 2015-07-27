@@ -35,7 +35,7 @@
 		</div>
 
 		<div id="app_container">
-			<a href="http://www.github.com/pablopunk/chronocube">
+			<a href="http://pablopunk.github.io/chronocube">
 				<img src="../img/chronocube.png"/>
 				<h3>Chronocube</h3>
 			</a>
