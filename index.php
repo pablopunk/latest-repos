@@ -55,12 +55,12 @@
 			</a>
 		</div>
 
-		<div id="app_container">
+		<!-- <div id="app_container">
 			<a href="blog/index.php">
 				<img src="img/wordpress.png"/>
 				<h3>Blog</h3>
 			</a>
-		</div>
+		</div> -->
 
 
 		<footer>
