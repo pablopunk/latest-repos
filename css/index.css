@@ -52,7 +52,7 @@ div#app_container a:link {
 }
 
 div#app_container img {
-	width: 10em;
+	width: 9em;
 	/* transiciones */
 	-o-transition:.2s;
 	-ms-transition:.2s;
@@ -62,7 +62,7 @@ div#app_container img {
 }
 
 div#app_container:hover img {
-	width: 11em;
+	width: 9.5em;
 	/* transiciones */
 	-o-transition:.2s;
 	-ms-transition:.2s;
