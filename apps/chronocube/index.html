@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Chrono Cube</title>
+  <title>Chronocube</title>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular&subset=Latin,Cyrillic">
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <script type="text/javascript" src="js/errors.js"></script>
@@ -11,9 +11,17 @@
   <script type="text/javascript" src="js/input.js"></script>
   <script type="text/javascript" src="js/data.js"></script>
 
+  <!-- made by www.metatags.org -->
+  <meta name="description" content="Time your Rubik's cube solves with this beautiful and simple app. Available on web and desktop." />
+  <meta name="keywords" content="rubik, rubiks, cube, timer, speedcube, feliks, zemdegs, chronocube, chronometer, time, record, solve, solves, average, space" />
+  <meta name="author" content="metatags generator">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="1 month">
+  <!--  -->
+
 </head>
 
-<body unselectable="on">
+<body unselectable="on" onload='initInput(); initData()'>
 
   <div id="forkme" onclick="window.open('http://www.github.com/pablopunk/chronocube');">
     <img id="github-logo" src="img/github.png"/ alt="github logo" onmouseover="document.getElementById('forkmemsg').style.visibility='visible'" onmouseout="document.getElementById('forkmemsg').style.visibility='hidden'">
