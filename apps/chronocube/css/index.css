@@ -52,6 +52,20 @@ span#subtitle {
   opacity: 0.7;
 }
 
+div#scroll-parent {
+  width: 20em;
+  height: 20em;
+  overflow: hidden;
+}
+
+div#scroll-child {
+  width: 100%;
+  height: 99%;
+  overflow-y: scroll;
+  overflow: auto;
+  padding-right: 3em; /* hides scroll-bar: increase this value for crossbrowser compatibility */
+}
+
 table#savedTimes {
   font-size: 1.5em;
   border-collapse: collapse;
@@ -61,7 +75,12 @@ table#savedTimes td:first-child {
   text-align: right;
 }
 
-table#savedTimes td:first-child, table#savedTimes td:nth-child(2) {
+table#savedTimes td:first-child {
+  width: 1.5em;
+  padding-right: 1em;
+}
+
+table#savedTimes td:nth-child(2) {
   width: 1.5em;
   padding-left: 1em;
   padding-right: 1em;
@@ -78,6 +97,19 @@ table#savedTimes td:nth-child(3) {
 
 table#savedTimes td:hover:nth-child(3) {
   color:white;
+}
+
+div#settings {
+  margin-top: 1em;
+  font-style: italic;
+  font-size: 0.9em;
+  padding: 1em;
+  opacity: 0.7;
+}
+
+div#settings input {
+  width: 0.9em;
+  margin-right: 0.5em;
 }
 
 div#console {
