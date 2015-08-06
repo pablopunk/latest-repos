@@ -4,3 +4,4 @@
 blog # carpeta solo en el server
 blog/**
 .htaccess
+apps/chronocube
