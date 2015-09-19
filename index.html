@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular&subset=Latin,Cyrillic">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
+	<link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/img/favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<script type="text/javascript">
+	var timeToFade = 100;
+
+	function goTo (div) {
+		$('#menu').fadeOut(timeToFade); 
+		$('#'+div).fadeIn(timeToFade);
+	}
+
+	function goBackFrom(div) { 
+		$("#menu").fadeIn(timeToFade);
+		$('#'+div).fadeOut(timeToFade); 
+		
+	}
+	</script>
+</head>
+
+<body>
+
+<div id="menu" class="lista">
+	<div id="lista-item" class="color1" onclick="goTo('apps')"><p>Apps</p></div>
+	<div id="lista-item" class="color2" onclick="goTo('pebble')"><p>Pebble Watchfaces</p></div>
+	<div id="lista-item" class="color3" onclick="goTo('webs')"><p>Webs</p></div>
+	<div id="lista-item" class="color4" onclick="window.open('https://github.com/pablopunk')"><p>Github</p></div>
+	<div id="lista-item" class="color5" onclick="goTo('social')"><p>Social</p></div>
+</div>
+
+<div id="apps" class="lista" style="display:none">
+	<div id="lista-item" class="back-button" onclick="goBackFrom('apps')"><p><</p></div>
+	<div id="lista-item" class="color1" onclick="window.open('https://github.com/pablopunk/Color-Do')"><p>Color Do</p></div>
+	<div id="lista-item" class="color2" onclick="window.open('https://github.com/pablopunk/SimpleCamera')"><p>Simple Camera</p></div>
+	<div id="lista-item" class="color4" onclick="window.open('http://chronocube.pablopunk.com')"><p>Chronocube</p></div>
+</div>
+
+<div id="pebble" class="lista" style="display:none">
+	<div id="lista-item" class="back-button" onclick="goBackFrom('pebble')"><p><</p></div>
+	<div id="lista-item" class="color1" onclick="window.open('https://github.com/pablopunk/pebble-watchfaces/tree/master/zebrahead_face/build')"><p>Zebrahead Face</p></div>
+	<div id="lista-item" class="color2"  onclick="window.open('https://github.com/pablopunk/pebble-watchfaces/tree/master/minimal_bars')"><p>Minimal Bars Face</p></div>
+</div>
+
+<div id="webs" class="lista" style="display:none">
+	<div id="lista-item" class="back-button" onclick="goBackFrom('webs')"><p><</p></div>
+	<div id="lista-item" class="color1" onclick="window.open('http://15visions.tk')"><p>15 visions</p></div>
+</div>
+
+<div id="social" class="lista" style="display:none">
+	<div id="lista-item" class="back-button" onclick="goBackFrom('social')"><p><</p></div>
+	<div id="lista-item" class="color1" onclick="window.open('https://youtube.com/varelapol13')"><p>YouTube</p></div>
+	<div id="lista-item" class="color2" onclick="window.open('https://twitter.com/pablopunk')"><p>Twitter</p></div>
+	<div id="lista-item" class="color3" onclick="window.open('https://instagram.com/pablopunk')"><p>Instagram</p></div>
+</div>
+
+<footer>
+	<p>© Pablo Varela 2015 </p>
+	<a href="http://uigradients.com">Get gradients like this background</a>
+</footer>
+
+	
+</body>
