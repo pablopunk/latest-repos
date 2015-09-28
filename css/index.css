@@ -28,7 +28,6 @@ div.lista {
 
 div#lista-item {
 	height: 40pt;
-	padding-left: 30pt;
 	opacity: 0.9;
 }
 
@@ -39,8 +38,8 @@ div#lista-item.back-button {
 	background-color: #005C97;
 }
 
-div#lista-item p {
-	margin: 0;
+div#lista-item span {
+	margin-left: 30pt;
 	line-height: 40pt; /* es la misma que lista-item asi se alinea al centro */
 }
 
@@ -49,7 +48,6 @@ div#lista-item.color1 {
 	background-color: #e35d5b;
 	-webkit-transition: 0.2s; /* Safari */
     transition: width 0.2s;
-
 }
 
 div#lista-item.color2 {
@@ -57,7 +55,6 @@ div#lista-item.color2 {
 	background-color: #d34d4b;
 	-webkit-transition: 0.2s; /* Safari */
     transition: width 0.2s;
-
 }
 
 div#lista-item.color3 {
@@ -136,7 +133,7 @@ div#lista-item.color5:hover {
 	div#lista-item.back-button { width: 125pt; }
 }
 
-footer {	
+footer {
 	font-family: Futura, Arial, sans-serif;
 	font-size: 10pt;
 }
@@ -156,8 +153,5 @@ footer a {
 	color: white;
 	float: right;
 	margin-right: 10pt;
-	
+
 }
-
-
-
