@@ -9,7 +9,7 @@ body {
   position: relative;
   height: 100%;
 	font-family: Tall;
-  font-size: 7vh;
+  font-size: 50pt;
   color: white;
   background-color: grey;
 }
@@ -19,6 +19,7 @@ body {
 }
 
 .contenido {
+  white-space: nowrap;
   padding-top: 40vh; /* Ambas suman 100vh          */
   height: 60vh;      /*                            */
   width: 50%;
@@ -31,14 +32,14 @@ body {
   background-size: cover;
   background-position: right;
   background-image: url("../img/left.png");
-  transition: 1.5s;
-  -webkit-transition: 1.5s;
+  transition: 1s;
+  -webkit-transition: 1s;
 }
 
 .left:hover {
   background-image: url("../img/left-color.png");
-  transition: 1.5s;
-  -webkit-transition: 1.5s;
+  transition: 1s;
+  -webkit-transition: 1s;
 }
 
 .left .item {
@@ -51,14 +52,14 @@ body {
   background-size: cover;
   background-position: left;
   background-image: url("../img/right.png");
-  transition: 1.5s;
-  -webkit-transition: 1.5s;
+  transition: 1s;
+  -webkit-transition: 1s;
 }
 
 .right:hover {
   background-image: url("../img/right-color.png");
-  transition: 1.5s;
-  -webkit-transition: 1.5s;
+  transition: 1s;
+  -webkit-transition: 1s;
 }
 
 .right .item {
@@ -66,7 +67,7 @@ body {
 }
 
 .item {
-  line-height: 7vh;
+  line-height: 50pt;
   vertical-align: text-top;
   background-color: rgba(255,255,255,0.3);
   transition: 0.3s;
