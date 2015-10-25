@@ -1,6 +1,5 @@
 # Archivos a ignorar por git
 .DS_Store
-*.esproj
 blog # carpeta solo en el server
 blog/**
 .htaccess

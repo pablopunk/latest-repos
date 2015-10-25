@@ -9,7 +9,7 @@ body {
   position: relative;
   height: 100%;
 	font-family: Tail;
-  font-size: 6vh;
+  font-size: 7vh;
   color: white;
   background-color: grey;
 }
@@ -66,7 +66,7 @@ body {
 }
 
 .item {
-  line-height: 6vh;
+  line-height: 7vh;
   vertical-align: text-top;
   background-color: rgba(255,255,255,0.3);
   transition: 0.3s;
