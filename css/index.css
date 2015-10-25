@@ -1,6 +1,6 @@
 
 @font-face {
-    font-family: Tail;
+    font-family: Tall;
     src: url('fonts/Tall Film.ttf');
 }
 
@@ -8,7 +8,7 @@ body {
 	margin: 0;
   position: relative;
   height: 100%;
-	font-family: Tail;
+	font-family: Tall;
   font-size: 7vh;
   color: white;
   background-color: grey;
