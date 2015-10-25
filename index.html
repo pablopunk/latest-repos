@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular&subset=Latin,Cyrillic">
+	<meta charset="utf-8"/>
+	<title>pablopunk$</title>
+	<link rel="stylesheet" href="css/fonts/Font-Awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
@@ -14,62 +15,21 @@
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
 	<script type="text/javascript">
-	var timeToFade = 100;
-
-	function goTo (div) {
-		$('#menu').fadeOut(timeToFade);
-		$('#'+div).fadeIn(timeToFade);
-	}
-
-	function goBackFrom(div) {
-		$("#menu").fadeIn(timeToFade);
-		$('#'+div).fadeOut(timeToFade);
-
-	}
 	</script>
 </head>
 
 <body>
 
-<div id="menu" class="lista">
-	<div id="lista-item" class="color1" onclick="goTo('apps')"><span>Apps</span></div>
-	<div id="lista-item" class="color2" onclick="goTo('pebble')"><span>Pebble Watchfaces</span></div>
-	<div id="lista-item" class="color3" onclick="goTo('webs')"><span>Webs</span></div>
-	<div id="lista-item" class="color4" onclick="window.open('https://github.com/pablopunk')"><span>Github</span></div>
-	<div id="lista-item" class="color5" onclick="goTo('social')"><span>Social</span></div>
-</div>
-
-<div id="apps" class="lista" style="display:none">
-	<div id="lista-item" class="back-button" onclick="goBackFrom('apps')"><span><</span></div>
-	<div id="lista-item" class="color1" onclick="window.open('https://github.com/pablopunk/Color-Do')"><span>Color Do</span></div>
-	<div id="lista-item" class="color2" onclick="window.open('https://github.com/pablopunk/SimpleCamera')"><span>Simple Camera</span></div>
-	<div id="lista-item" class="color4" onclick="window.open('http://chronocube.pablopunk.com')"><span>Chronocube</span></div>
-</div>
-
-<div id="pebble" class="lista" style="display:none">
-	<div id="lista-item" class="back-button" onclick="goBackFrom('pebble')"><span><</span></div>
-	<div id="lista-item" class="color1" onclick="window.open('https://github.com/pablopunk/pebble-watchfaces/tree/master/zebrahead_face/build')"><span>Zebrahead Face</span></div>
-	<div id="lista-item" class="color2"  onclick="window.open('https://github.com/pablopunk/pebble-watchfaces/tree/master/minimal_bars')"><span>Minimal Bars Face</span></div>
-</div>
-
-<div id="webs" class="lista" style="display:none">
-	<div id="lista-item" class="back-button" onclick="goBackFrom('webs')"><span><</span></div>
-	<div id="lista-item" class="color1" onclick="window.open('http://15visions.tk')"><span>15 visions</span></div>
-</div>
-
-<div id="social" class="lista" style="display:none">
-	<div id="lista-item" class="back-button" onclick="goBackFrom('social')"><p><<p></div>
-	<div id="lista-item" class="color1" onclick="window.open('https://youtube.com/varelapol13')"><span>YouTube</span></div>
-	<div id="lista-item" class="color2" onclick="window.open('https://twitter.com/pablopunk')"><span>Twitter</span></div>
-	<div id="lista-item" class="color3" onclick="window.open('https://instagram.com/pablopunk')"><span>Instagram</span></div>
-</div>
-
-<footer>
-	<p>© Pablo Varela 2015 </p>
-	<a href="http://uigradients.com">Get gradients like this background</a>
-</footer>
-
-
+	<div class="contenedor">
+    <div class="contenido left">
+			<div class="item"><a href="http://twitter.com/pablopunk">Twitter <i class="fa fa-twitter"></i></a></div>
+			<div class="item"><a href="http://youtube.com/varelapol13">YouTube <i class="fa fa-youtube-play"></i></a></div>
+		</div>
+    <div class="contenido right">
+			<div class="item"><a href="http://github.com/pablopunk"><i class="fa fa-github"></i> Github</a></div>
+			<div class="item"><a href="http://chronocube.pablopunk.com"><i class="fa fa-cube"></i> Chronocube</a></div>
+			<footer><i class="fa fa-copyright"></i> Pablo Varela 2015</footer>
+		</div>
+	</div>
 </body>
