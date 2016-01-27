@@ -1,5 +1,8 @@
 # Readme
-This is the source code repository of the personal website www.pablopunk.com
+This is the source code repository of the personal website [www.pablopunk.com](www.pablopunk.com)
+
+### TO DO
+* initial animation in mobile view
 
 # License
 MIT License: check `license.md`
