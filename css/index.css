@@ -5,6 +5,10 @@ body {
   color: #1abc9c;
 }
 
+#contenido {
+  white-space: nowrap;
+}
+
 center {
   width: 100%;
 }
@@ -42,10 +46,10 @@ center {
 
 #left {
   text-align: right;
-  margin-right: 20pt;
+  margin-right: 10vw;
 }
 
 #right {
   text-align: left;
-  margin-left: 20pt;
+  margin-left: 10vw;
 }

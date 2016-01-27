@@ -25,10 +25,10 @@
 					opacity: '1',
 				}, {duration: 800, queue: false}, 'easeInOutCirc');
 				$("#left").animate({
-					left: '+=20',
+					left: '+=9vw',
 				}, {duration: 800, queue: false}, 'easeInOutCirc');
 				$("#right").animate({
-					left: '-=20',
+					left: '-=9vw',
 				}, {duration: 800, queue: false}, 'easeInOutCirc');
 				$(".item a").hover(
 					function(){ // mouse in
@@ -60,15 +60,17 @@
 </head>
 
 <body onload="init()">
-	<center>
-		<div class="links" id="left">
-			<div class="item"><a href="https://github.com/pablopunk"><div class="appear">github</div><i class="fa fa-github"></i></a></div>
-			<div class="item"><a href="https://twitter.com/pablopunk"><div class="appear">twitter</div><i class="fa fa-twitter"></i></a></div>
-		</div>
-		<div class="links" id="right">
-			<div class="item"><a href="https://youtube.com/varelapol13"><i class="fa fa-youtube-play"></i><div class="appear">youtube</div></a></div>
-			<div class="item"><a href="http://chronocube.pablopunk.com"><i class="fa fa-cube"></i><div class="appear">chronocube</div></a></div>
-		</div>
-	</center>
+	<div id="contenido">
+		<center>
+			<div class="links" id="left">
+				<div class="item"><a href="https://github.com/pablopunk"><div class="appear">github</div><i class="fa fa-github"></i></a></div>
+				<div class="item"><a href="https://twitter.com/pablopunk"><div class="appear">twitter</div><i class="fa fa-twitter"></i></a></div>
+			</div>
+			<div class="links" id="right">
+				<div class="item"><a href="https://youtube.com/varelapol13"><i class="fa fa-youtube-play"></i><div class="appear">youtube</div></a></div>
+				<div class="item"><a href="http://chronocube.pablopunk.com"><i class="fa fa-cube"></i><div class="appear">chronocube</div></a></div>
+			</div>
+		</center>
+	</div>
 
 </body>
