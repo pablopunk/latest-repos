@@ -8,28 +8,47 @@
 	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
-	<link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/img/favicons/favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
 	<link rel="manifest" href="/img/favicons/manifest.json">
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
+		function init() {
+			$(".links").css("opacity", 0)
+			$(".links").animate({
+        opacity: '1',
+    	}, {duration: 800, queue: false}, 'easeInOutCirc');
+			$("#left").animate({
+				left: '+=20',
+			}, {duration: 800, queue: false}, 'easeInOutCirc');
+			$("#right").animate({
+				left: '-=20',
+			}, {duration: 800, queue: false}, 'easeInOutCirc');
+			$("li").hover(
+				function(){ // mouse in
+					$(this).find(".appear").animate({
+						opacity: '1',
+					}, 250);
+				},
+				function(){ // mouse out
+					$(this).find(".appear").animate({
+						opacity: '0'
+					}, 250);
+				}, 'easeInOutCirc');
+		}
 	</script>
 </head>
 
-<body>
+<body onload="init()">
+	<center>
+		<div class="links" id="left">
+			<li><span class="appear">github</span><a href="https://github.com/pablopunk"><i class="fa fa-github"></i></a></li><br>
+			<li><span class="appear">twitter</span><a href="https://twitter.com/pablopunk"><i class="fa fa-twitter"></i></a></li>
+		</div>
+		<div class="links" id="right">
+			<li><a href="https://youtube.com/varelapol13"><i class="fa fa-youtube-play"></i></a><span class="appear">youtube</span></li><br>
+			<li><a href="http://chronocube.pablopunk.com"><i class="fa fa-cube"></i></a><span class="appear">chronocube</span></li>
+		</div>
+	</center>
 
-	<div class="contenedor">
-    <div class="contenido left">
-			<div class="item"><a href="http://twitter.com/pablopunk">Twitter <i class="fa fa-twitter"></i></a></div>
-			<div class="item"><a href="http://youtube.com/varelapol13">YouTube <i class="fa fa-youtube-play"></i></a></div>
-		</div>
-    <div class="contenido right">
-			<div class="item"><a href="http://github.com/pablopunk"><i class="fa fa-github"></i> Github</a></div>
-			<div class="item"><a href="http://chronocube.pablopunk.com"><i class="fa fa-cube"></i> Chronocube</a></div>
-			<footer><i class="fa fa-copyright"></i> Pablo Varela 2015</footer>
-		</div>
-	</div>
 </body>
