@@ -11,8 +11,15 @@ center {
 
 .links {
   position: relative;
-  display: inline-block;
-  margin-top: 25%;
+}
+
+.item {
+  height: 80pt;
+  width: 80%;
+  font-size: 6em;
+  padding-top: 10%;
+  padding-bottom: 2.5%;
+  border-bottom: 1px solid #1abc9c;
 }
 
 .item a {
@@ -26,26 +33,11 @@ center {
   transition: 0.25s;
 }
 
-.item {
-  height: 40pt;
-  font-size: 20pt;
-}
-
 .appear {
-  opacity: 0;
+  opacity: 1;
   margin: 10pt;
   display: inline;
   vertical-align: middle;
-  line-height: 40pt;
-  font-size: 15pt;
-}
-
-#left {
-  text-align: right;
-  margin-right: 20pt;
-}
-
-#right {
-  text-align: left;
-  margin-left: 20pt;
+  line-height: 80px;
+  font-size: 1em;
 }

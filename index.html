@@ -2,8 +2,8 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>pablopunk$</title>
-	<link rel="stylesheet" href="css/fonts/Font-Awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" href="css/fonts/Font-Awesome/css/font-awesome.min.css">
 	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
@@ -14,40 +14,61 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 		function init() {
-			$(".links").css("opacity", 0)
-			$(".links").animate({
-        opacity: '1',
-    	}, {duration: 800, queue: false}, 'easeInOutCirc');
-			$("#left").animate({
-				left: '+=20',
-			}, {duration: 800, queue: false}, 'easeInOutCirc');
-			$("#right").animate({
-				left: '-=20',
-			}, {duration: 800, queue: false}, 'easeInOutCirc');
-			$("li").hover(
-				function(){ // mouse in
-					$(this).find(".appear").animate({
-						opacity: '1',
-					}, 250);
-				},
-				function(){ // mouse out
-					$(this).find(".appear").animate({
-						opacity: '0'
-					}, 250);
-				}, 'easeInOutCirc');
+			if (isMobile()) {
+				console.log('changing css to mobile..');
+				changeCSStoMobile();
+				$('.fa').remove()
+				$('.item').last().css('border-bottom', 'none');
+			} else {
+				$(".links").css("opacity", 0)
+				$(".links").animate({
+					opacity: '1',
+				}, {duration: 800, queue: false}, 'easeInOutCirc');
+				$("#left").animate({
+					left: '+=20',
+				}, {duration: 800, queue: false}, 'easeInOutCirc');
+				$("#right").animate({
+					left: '-=20',
+				}, {duration: 800, queue: false}, 'easeInOutCirc');
+				$(".item").hover(
+					function(){ // mouse in
+						$(this).find(".appear").animate({
+							opacity: '1',
+						}, 250);
+					},
+					function(){ // mouse out
+						$(this).find(".appear").animate({
+							opacity: '0'
+						}, 250);
+					}, 'easeInOutCirc');
+			}
 		}
+
+		function isMobile()
+		{
+			// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+			// 	return true;
+			// return false;
+			return true;
+		}
+
+		 function changeCSStoMobile()
+		 {
+			 var oldlink = document.getElementsByTagName("link").item(0);
+			 oldlink.href = "css/index.mobile.css";
+		 }
 	</script>
 </head>
 
 <body onload="init()">
 	<center>
 		<div class="links" id="left">
-			<li><span class="appear">github</span><a href="https://github.com/pablopunk"><i class="fa fa-github"></i></a></li><br>
-			<li><span class="appear">twitter</span><a href="https://twitter.com/pablopunk"><i class="fa fa-twitter"></i></a></li>
+			<div class="item"><a href="https://github.com/pablopunk"><div class="appear">github</div><i class="fa fa-github"></i></a></div>
+			<div class="item"><a href="https://twitter.com/pablopunk"><div class="appear">twitter</div><i class="fa fa-twitter"></i></a></div>
 		</div>
 		<div class="links" id="right">
-			<li><a href="https://youtube.com/varelapol13"><i class="fa fa-youtube-play"></i></a><span class="appear">youtube</span></li><br>
-			<li><a href="http://chronocube.pablopunk.com"><i class="fa fa-cube"></i></a><span class="appear">chronocube</span></li>
+			<div class="item"><a href="https://youtube.com/varelapol13"><i class="fa fa-youtube-play"></i><div class="appear">youtube</div></a></div>
+			<div class="item"><a href="http://chronocube.pablopunk.com"><i class="fa fa-cube"></i><div class="appear">chronocube</div></a></div>
 		</div>
 	</center>
 
