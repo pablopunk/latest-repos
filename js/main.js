@@ -47,7 +47,12 @@ function changeCSStoMobile()
 function randomLabel()
 {
   howManyItems = 4
-  while (oldRandom == random) random = Math.floor(Math.random()*howManyItems)
+  // never animates twice the same item
+  // never animates an item with the mouse over it
+  while (oldRandom == random || $('.appear').eq(random).is(':hover')) {
+    random = Math.floor(Math.random()*howManyItems)
+  }
+
   $('.appear').get(random).animate([{
     opacity: '1',
   }, {
