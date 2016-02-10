@@ -52,11 +52,17 @@ function randomLabel()
   while (oldRandom == random || $('.appear').eq(random).is(':hover')) {
     random = Math.floor(Math.random()*howManyItems)
   }
-
-  $('.appear').get(random).animate([{
+  // this way it works cross-browser
+  $('.appear').eq(random).css("opacity",1);
+  $('.appear').eq(random).animate({"opacity":0}, 1000);
+  /*
+  // this is a more advanced and compact way to do it,
+  // but it seems to work just in Chrome
+  $('.appear').eq(random).animate([{
     opacity: '1',
   }, {
     opacity: '0',
   }], { duration: 1000 });
+  */
   oldRandom = random
 }

@@ -36,6 +36,7 @@ center {
 }
 
 .appear {
+  position: relative;
   opacity: 0;
   margin: 10pt;
   display: inline;
