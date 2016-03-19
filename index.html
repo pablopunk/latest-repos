@@ -1,32 +1,96 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8"/>
-	<title>pablopunk$</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<link rel="stylesheet" href="css/fonts/Font-Awesome/css/font-awesome.min.css">
-	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
-	<link rel="manifest" href="/img/favicons/manifest.json">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>pablopunk$</title>
+  <meta name="description" content="Pablo Varela's personal website">
+  <meta name="author" content="Pablo Varela">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+	<link rel="manifest" href="/images/favicons/manifest.json">
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	
+	<!-- STYLE
+	__________________________________________________ -->
+	<style type="text/css">
+	body {
+		background-color: #ecf0f1;
+	}
+	.container {
+		max-width: 800px;
+		margin-top: 23%;
+	}
+	a.button {
+		color: #FF2A68;
+		border-color: #FF2A68;
+		width: 100%;
+	}
+	a.button:hover {
+		background-color: #1abc9c;
+		border-color: #1abc9c;
+		color: white;
+	}
+	a.button span {
+		font-family: 'Lato';
+	}
+	footer {
+		margin-top: 40vh;
+		color: #1abc9c;
+		font-family: 'Lato';
+		font-weight: lighter;
+	}
+	</style>
+
 </head>
+<body>
 
-<body onload="init()">
-	<div id="contenido">
-		<center>
-			<div class="links" id="left">
-				<div class="item"><a href="https://github.com/pablopunk"><div class="appear">github</div><i class="fa fa-github"></i></a></div>
-				<div class="item"><a href="https://twitter.com/pablopunk"><div class="appear">twitter</div><i class="fa fa-twitter"></i></a></div>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<center>
+		<div class="container">
+			<div class="three columns">
+					<a class="button" href="https://twitter.com/pablopunk"><i class="fa fa-twitter"> <span>twitter</span></i></a>
 			</div>
-			<div class="links" id="right">
-				<div class="item"><a href="https://youtube.com/varelapol13"><i class="fa fa-youtube-play"></i><div class="appear">youtube</div></a></div>
-				<div class="item"><a href="http://pablopunk.github.io/chronocube"><i class="fa fa-cube"></i><div class="appear">chronocube</div></a></div>
+			<div class="three columns">
+					<a class="button" href="https://github.com/pablopunk"><i class="fa fa-github"> <span>github</span></i></a>
 			</div>
-		</center>
-	</div>
-
+			<div class="three columns">
+					<a class="button" href="https://youtube.com/varelapol13"><i class="fa fa-youtube-play"> <span>youtube</span></i></a>
+			</div>
+			<div class="three columns">
+					<a class="button" href="https://pablopunk.github.io/chronocube"><i class="fa fa-cube"> <span>chronocube</span></i></a>
+			</div>
+		</div>
+		<footer>
+			<p> If you want a design like this one, <a href="https://twitter.com/pablopunk"> contact me</a> </p>
+			<p>© PABLO VARELA 2016</p>
+		</footer>
+	</center>
+	
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+</html>
