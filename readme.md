@@ -2,7 +2,7 @@
 This is the source code repository of the personal website [www.pablopunk.com](www.pablopunk.com)
 
 ### TO DO
-* initial animation in mobile view
+* hotfix: skeleton button for 'chronocube' overlaps border when resizing window
 
 # License
 MIT License: check `license.md`
