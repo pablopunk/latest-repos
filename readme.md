@@ -4,11 +4,11 @@ This is the source code repository of the personal website [www.pablopunk.com](w
 ## Design
 I'm using *skeleton* to build a responsive website with very minimal code. With the same html/css I get this beautiful design on desktop/tablet (large screens):
 
-![screenshot1](http://cl.ly/2l0T2j1U171q)
+![screenshot1](http://f.cl.ly/items/153I0U2M053m451y2W1J/Image.jpg)
 
 While on phones (smaller screens or smaller desktop windows) I can get a one column view:
 
-![screenshot2](http://cl.ly/3p3E372e332i)
+![screenshot2](http://f.cl.ly/items/0s3A221u2d0O2q0R060v/Image.jpg)
 
 ## TO DO
 * themes
