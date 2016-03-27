@@ -28,6 +28,19 @@ buttons = [
 
 # document ready
 $ ->
+  # create each button
   for b in buttons
     button_html = "<div class='three columns'><a class='button' href='#{b.link}'><i class='#{b.class}'></i> #{b.name}</a></div>"
     $('.container').append button_html
+  
+  # animations
+  $('.button').css { opacity : 0 }
+  $('.button').css { 'margin-left' : -3000 }
+  delay = 400
+  $($('.button').get().reverse()).each ->
+    $(this)
+      .animate { 'margin-left' : 0, opacity : 1 }, delay, "easeOutCirc"
+    delay += 300
+
+
+    

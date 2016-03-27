@@ -23,14 +23,26 @@
   ];
 
   $(function() {
-    var b, button_html, i, len, results;
-    results = [];
+    var b, button_html, delay, i, len;
     for (i = 0, len = buttons.length; i < len; i++) {
       b = buttons[i];
       button_html = "<div class='three columns'><a class='button' href='" + b.link + "'><i class='" + b["class"] + "'></i> " + b.name + "</a></div>";
-      results.push($('.container').append(button_html));
+      $('.container').append(button_html);
     }
-    return results;
+    $('.button').css({
+      opacity: 0
+    });
+    $('.button').css({
+      'margin-left': -3000
+    });
+    delay = 400;
+    return $($('.button').get().reverse()).each(function() {
+      $(this).animate({
+        'margin-left': 0,
+        opacity: 1
+      }, delay, "easeOutCirc");
+      return delay += 300;
+    });
   });
 
 }).call(this);
