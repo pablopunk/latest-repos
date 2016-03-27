@@ -35,7 +35,7 @@ $ ->
   
   # animations
   $('.button').css { opacity : 0 }
-  $('.button').css { 'margin-left' : -3000 }
+  $('.button').css { 'margin-left' : "-1000%" }
   delay = 400
   $($('.button').get().reverse()).each ->
     $(this)
