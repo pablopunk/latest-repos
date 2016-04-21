@@ -5,3 +5,4 @@ blog/**
 .htaccess
 apps/chronocube
 apps/update-app.sh
+owncloud
