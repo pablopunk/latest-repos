@@ -7,3 +7,5 @@ apps/chronocube
 apps/update-app.sh
 owncloud
 chronocube
+phpmyadmin
+autodeploy
