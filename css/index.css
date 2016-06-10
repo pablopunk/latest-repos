@@ -3,19 +3,26 @@ body {
     font-family: monospace;
     text-transform: uppercase;
     background-color: #3498db;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
     height: 100%;
 }
 
 a {
     display: inline-block;
-    color: #f7ff00;
+    color: #3f9edd;
     text-decoration: none;
+    height: 100%;
 }
 
 .container {
     margin-top: 35vh;
     text-align: center;
+    padding: 10px 0 10px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 5vh;
 }
 
 .btn {
@@ -31,9 +38,14 @@ a {
     visibility: hidden;
     margin-top: 10vh;
     font-size: 200%;
+    color: #2b87c3;
 }
 
 footer {
     margin-top: 15vh;
     text-align: center;
+}
+
+footer a {
+    color: #3f9edd;
 }
