@@ -26,7 +26,9 @@ function randomColor() {
 
 function beginRainbowIcons() {
     setInterval(function() {
-        $('.btn').animate( { color: randomColor() }, colorStep )
+        $('.btn').each(function(i, el){
+            $(this).animate( { color: randomColor() }, colorStep )
+        })
     } , colorStep);
 
 }
