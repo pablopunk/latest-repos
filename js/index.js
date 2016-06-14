@@ -1,4 +1,6 @@
 
+var colorStep = 1000;
+
 function isMobile()
 {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
@@ -18,6 +20,17 @@ function mobileView()
     $('a.btn').last().css('border-bottom', 'none')
 }
 
+function randomColor() {
+    return hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+}
+
+function beginRainbowIcons() {
+    setInterval(function() {
+        $('.btn').animate( { color: randomColor() }, colorStep )
+    } , colorStep);
+
+}
+
 $(document).ready (function()
 {
     if (isMobile()) {
@@ -31,5 +44,6 @@ $(document).ready (function()
         $('.btn').mouseout(function() {
             $('#label').css('visibility', 'hidden')
         })
+        beginRainbowIcons();
     }
 });
