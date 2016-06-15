@@ -1,5 +1,5 @@
 
-var colorStep = 1000;
+var colorStep = 1500;
 
 function isMobile()
 {
@@ -24,11 +24,16 @@ function randomColor() {
     return hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
 }
 
+function animateIconsColor() {
+    $('.btn').each(function(i, el){
+        $(this).animate( { color: randomColor() }, colorStep )
+    })
+}
+
 function beginRainbowIcons() {
+    animateIconsColor(); 
     setInterval(function() {
-        $('.btn').each(function(i, el){
-            $(this).animate( { color: randomColor() }, colorStep )
-        })
+        animateIconsColor();
     } , colorStep);
 
 }
