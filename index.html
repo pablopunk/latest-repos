@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- Basic Page Needs
+	<!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>pablopunk$</title>
-  <meta name="description" content="Pablo Varela's personal website">
-  <meta name="author" content="Pablo Varela">
+	<meta charset="utf-8">
+	<title>pablopunk$</title>
+	<meta name="description" content="Pablo Varela's personal website">
+	<meta name="author" content="Pablo Varela">
 
 	<!-- jQuery and jQuery-UI
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -14,83 +15,103 @@
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
-  <!-- Mobile Specific Metas
+	<!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<style type="text/css">
-
-	body {
-		width: 100%;
-		height:100%;
-		margin: 0;
-		padding: 0;
-		background-color: black;
-		color: white;
-		font-family: Monospace;
-	}
-
-	#content {
-		margin-left: 2vh;
-		width: 50%;
-	}
-
-	a.dir {
-		display: block;
-		text-decoration: none;
-		color: rgb(0%, 100%, 0%);
-	}
-
-	a.dir:hover {
-		color: rgb(0%, 70%, 90%);
-	}
-
-	a:visited {
-		text-decoration: none;
-	}
-
-	a.file {
-		display: block;
-		text-decoration: none;
-		color: rgb(80%, 0%, 20%);
-	}
-
-	a.file:hover {
-		color: rgb(0%, 70%, 90%);
-	}
-
-	.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-	}
-	@keyframes blink{
-		0% { opacity:1; }
-		50% { opacity:0; }
-		100% { opacity:1; }
-	}
-	@-webkit-keyframes blink{
-		0% { opacity:1; }
-		50% { opacity:0; }
-		100% { opacity:1; }
-	}
-	@-moz-keyframes blink{
-		0% { opacity:1; }
-		50% { opacity:0; }
-		100% { opacity:1; }
-	}
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background-color: black;
+			color: white;
+			font-family: Monospace;
+		}
+		
+		#content {
+			margin-left: 2vh;
+			width: 50%;
+		}
+		
+		a.dir {
+			display: block;
+			text-decoration: none;
+			color: rgb(0%, 100%, 0%);
+		}
+		
+		a.dir:hover {
+			color: rgb(0%, 70%, 90%);
+		}
+		
+		a:visited {
+			text-decoration: none;
+		}
+		
+		a.file {
+			display: block;
+			text-decoration: none;
+			color: rgb(80%, 0%, 20%);
+		}
+		
+		a.file:hover {
+			color: rgb(0%, 70%, 90%);
+		}
+		
+		.typed-cursor {
+			opacity: 1;
+			-webkit-animation: blink 0.7s infinite;
+			-moz-animation: blink 0.7s infinite;
+			animation: blink 0.7s infinite;
+		}
+		
+		@keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		
+		@-webkit-keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		
+		@-moz-keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
 	</style>
 
 	<!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<script src="typed.js"></script>
 	<script type="text/javascript">
-	var ps1= 'you@pablopunk.com$ ';
-	var cmd= '^1300ls -1';
-	var links= '^2000<a class="dir" href="http://pablopunk.com" title="here">./</a>\
+		var ps1 = 'you@pablopunk.com$ ';
+		var cmd = '^1300ls -1';
+		var links = '^2000<a class="dir" href="http://pablopunk.com" title="here">./</a>\
 			<a class="dir" href="https://github.com/pablopunk/pablopunk.com" title="up">../</a>\
 			<a class="dir" href="https://twitter.com/pablopunk" title="twitter">My texts/</a>\
 			<a class="dir" href="https://youtube.com/pablopunk" title="youtube">My videos/</a>\
@@ -98,38 +119,40 @@
 			<a class="dir" href="https://pablopunk.github.io/chronocube" title="chronocube">My app/</a>\
 			<a class="dir" href="https://flickr.com/pablopunk" title="flickr">My pictures/</a>\
 			<a class="file" href="./copyright.txt" title="flickr">copyright.txt</a>'
-	var ps2= '^3500you@pablopunk.com$ ';
+		var ps2 = '^3500you@pablopunk.com$ ';
 
-	$( document ).ready(function(){
-		// first, the prompt
-		$('#PS1').typed({
-			strings	: [ps1],
-			typeSpeed: 0
+		$(document).ready(function() {
+			// first, the prompt
+			$('#PS1').typed({
+				strings: [ps1],
+				typeSpeed: 0
+			});
+			// second, the command
+			$('#cmd').typed({
+				strings: [cmd],
+				typeSpeed: 0
+			});
+			// third, links
+			$('#links').typed({
+				strings: [links],
+				typeSpeed: -100
+			});
+			// finally, the new prompt
+			$('#PS2').typed({
+				strings: [ps2],
+				typeSpeed: 0
+			});
+			$('.typed-cursor').remove();
+
+			setTimeout(function() {
+				$('#PS2').after('<span class="typed-cursor">|</span>'); // typed cursor
+			}, 4300)
 		});
-		// second, the command
-		$('#cmd').typed({
-			strings	: [cmd],
-			typeSpeed: 0
-		});
-		// third, links
-		$('#links').typed({
-			strings : [links],
-			typeSpeed : -100
-		});
-		// finally, the new prompt
-		$('#PS2').typed({
-			strings	: [ps2],
-			typeSpeed: 0
-		});
-		$('.typed-cursor').remove();
-		
-		setTimeout( function() {
-			$('#PS2').after('<span class="typed-cursor">|</span>'); // typed cursor
-		}, 4300) });
 	</script>
 </head>
+
 <body>
-	
+
 	<div id="content">
 		<p class="prompt"><span id="PS1"></span><span id="cmd"></span></p>
 		<div id="links"></div>
@@ -137,4 +160,5 @@
 	</div>
 
 </body>
+
 </html>
