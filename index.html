@@ -67,6 +67,10 @@
 			-moz-animation: blink 0.7s infinite;
 			animation: blink 0.7s infinite;
 		}
+
+		#cat {
+			color: aqua;
+		}
 		
 		@keyframes blink {
 			0% {
@@ -118,35 +122,56 @@
 			<a class="dir" href="https://github.com/pablopunk" title="github">My code/</a>\
 			<a class="dir" href="https://pablopunk.github.io/chronocube" title="chronocube">My app/</a>\
 			<a class="dir" href="https://flickr.com/pablopunk" title="flickr">My pictures/</a>\
-			<a class="file" href="./copyright.txt" title="flickr">copyright.txt</a>'
+			<a class="file" href="./copyright.txt" title="copyright">copyright.txt</a>\
+			<a class="file" href="./help.txt" title="help">help.txt</a>'
 		var ps2 = '^3500you@pablopunk.com$ ';
+		var cmd2 = '^4800cat help.txt';
+		var cat = '^5600\
+					Click on a folder or file to open it';
+		var ps3 = '^6000you@pablopunk.com$ ';
 
 		$(document).ready(function() {
-			// first, the prompt
+			// prompt
 			$('#PS1').typed({
 				strings: [ps1],
 				typeSpeed: 0
 			});
-			// second, the command
+			// command
 			$('#cmd').typed({
 				strings: [cmd],
 				typeSpeed: 0
 			});
-			// third, links
+			// links
 			$('#links').typed({
 				strings: [links],
 				typeSpeed: -100
 			});
-			// finally, the new prompt
+			// new prompt
 			$('#PS2').typed({
 				strings: [ps2],
 				typeSpeed: 0
 			});
-			$('.typed-cursor').remove();
+			// new  command
+			$('#cmd2').typed({
+				strings: [cmd2],
+				typeSpeed: 0
+			});
+			// help file
+			$('#cat').typed({
+				strings: [cat],
+				typeSpeed: -100
+			});
+			// new prompt
+			$('#PS3').typed({
+				strings: [ps3],
+				typeSpeed: -100
+			});
+
+			$('.typed-cursor').remove(); // remove cursor
 
 			setTimeout(function() {
-				$('#PS2').after('<span class="typed-cursor">|</span>'); // typed cursor
-			}, 4300)
+				$('#PS3').after('<span class="typed-cursor">|</span>'); // typed cursor
+			}, 6300)
 		});
 	</script>
 </head>
@@ -156,7 +181,9 @@
 	<div id="content">
 		<p class="prompt"><span id="PS1"></span><span id="cmd"></span></p>
 		<div id="links"></div>
-		<p class="prompt"><span id="PS2"></span></p>
+		<p class="prompt"><span id="PS2"></span><span id="cmd2"></span></p>
+		<div id="cat"></div>
+		<p class="prompt"><span id="PS3"></span></p>
 	</div>
 
 </body>
