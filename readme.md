@@ -5,5 +5,5 @@ This is the source code repository of the personal website [www.pablopunk.com](w
 
 This version emulates a terminal using [Typed.js](http://www.mattboldt.com/demos/typed-js/) for animations.
 
-![shot](https://raw.githubusercontent.com/pablopunk/pablopunk.github,io/master/images/screenshot.gif)
+![shot](https://raw.githubusercontent.com/pablopunk/pablopunk.github.io/master/images/screenshot.gif)
 
