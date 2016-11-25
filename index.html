@@ -49,7 +49,7 @@
 		a.dir {
 			display: block;
 			text-decoration: none;
-			color: rgb(0%, 100%, 0%);
+			color: #36D7B7;
 		}
 		
 		a.dir:hover {
@@ -63,7 +63,7 @@
 		a.file {
 			display: block;
 			text-decoration: none;
-			color: rgb(80%, 0%, 20%);
+			color: #F62459;
 		}
 		
 		a.file:hover {
@@ -78,8 +78,12 @@
 		}
 
 		#cat {
-			color: aqua;
+			color: #FFB61E;
 		}
+
+        .user, .machine{
+            color: #89C4F4;
+        }
 		
 		@keyframes blink {
 			0% {
@@ -122,7 +126,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<script src="typed.js"></script>
 	<script type="text/javascript">
-		var ps1 = 'you@pablopunk.com$ ';
+		var ps1 = '<span class="user">you</span><span class="machine">@pablopunk.com$</span> ';
 		var cmd = '^1300ls -a1';
 		var links = '^2000<a class="dir" href="http://pablopunk.com" title="here">./</a>\
 			<a class="dir" href="https://github.com/pablopunk/pablopunk.com" title="up">../</a>\
@@ -133,11 +137,11 @@
 			<a class="dir" href="https://youtube.com/pablopunk" title="youtube">My videos/</a>\
 			<a class="file" href="./copyright.txt" title="copyright">copyright.txt</a>\
 			<a class="file" href="./help.txt" title="help">help.txt</a>'
-		var ps2 = '^3500you@pablopunk.com$ ';
+		var ps2 = '^3500'+ps1;
 		var cmd2 = '^4800cat help.txt';
 		var cat = '^5600\
 					Click on a folder or file to open it';
-		var ps3 = '^6000you@pablopunk.com$ ';
+		var ps3 = '^6000'+ps1;
 
 		$(document).ready(function() {
 			// prompt
