@@ -1,5 +1,5 @@
 # Readme
-This is the source code repository of the personal website [www.pablopunk.com](www.pablopunk.com)
+This is the source code repository of the personal website [www.pablopunk.com](http://www.pablopunk.com)
 
 ## New design
 
