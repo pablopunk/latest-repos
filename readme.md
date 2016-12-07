@@ -7,3 +7,4 @@ This version emulates a terminal using [Typed.js](http://www.mattboldt.com/demos
 
 ![shot](https://raw.githubusercontent.com/pablopunk/pablopunk.github.io/master/images/screenshot.gif)
 
+The terminal icon is from [Hyper app](http://hyper.is)
