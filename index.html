@@ -33,7 +33,7 @@
 		}
 		
 		#content {
-            margin-top: 15vh;
+            margin-top: 10%;
 			width: 90%;
             background: url('./images/terminal.png');
             background-repeat: no-repeat;
@@ -80,31 +80,51 @@
 
 		#dock {
 			height: 100%;
-			width: 30%;
-			background-color: #1c1c1c;
+			width: 16rem;
+			background-color: #2c2c2c;
 			margin: auto;
-			border-radius: 2px 2px 0 0;
+			border-radius: 4px 4px 0 0;
+			text-align: center;
 		}
 
 		.dock-icon {
-			width: 4rem;
-			height: 4rem;
+			width: 3.5rem;
+			height: 3.5rem;
 			margin: auto;
+			display: inline-block;
 		}
 
 		.dock-icon img {
 			width: 100%;
 			margin-top: -0.7rem;
-			transition: 0.1s;
+			transition: 0.2s;
 		}
 
 		.dock-icon img:hover {
 			filter: brightness(150%);
 			width: 4.5rem;
 			margin-top: -1.2rem;
-			margin-left: -0.25rem;
+			margin-left: -0.5rem;
 			cursor: pointer;
-			transition: 0.1s;
+			transition: 0.2s;
+		}
+
+		.dock-icon img:hover + .active {
+			opacity: 0;
+			transition: 0.01s;
+		}
+
+		.active {
+			background-color: white;
+			position: absolute;
+			display: inline-block;
+			width: 0.3rem;
+			height: 0.3rem;
+			border-radius: 20px;
+			bottom: 0;
+			margin-left: -2rem;
+			overflow: hidden;
+			transition: 1s;
 		}
 		
 		.typed-cursor {
@@ -241,7 +261,18 @@
 	<div id="dock-container">
 		<div id="dock">
 			<div class="dock-icon">
-				<img src="images/terminal-icon.png" alt="terminal icon"/>
+				<img src="images/finder-icon.png" alt="finder icon"/>
+				<div class="active"></div>
+			</div>
+			<div class="dock-icon">
+				<img src="images/terminal-icon.png" alt="terminal icon" onclick="location.reload()"/>
+				<div class="active"></div>
+			</div>
+			<div class="dock-icon">
+				<img src="images/github-icon.png" alt="github icon" onclick="window.open('https://github.com/pablopunk')"/>
+			</div>
+			<div class="dock-icon">
+				<img src="images/atom-icon.png" alt="atom icon" onclick="window.open('https://github.com/pablopunk/pablopunk.github.io/blob/master/index.html')"/>
 			</div>
     	</div>
     </div>
