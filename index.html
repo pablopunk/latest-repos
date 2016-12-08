@@ -117,6 +117,7 @@
 		.active {
 			background-color: white;
 			position: absolute;
+			opacity: 0;
 			display: inline-block;
 			width: 0.3rem;
 			height: 0.3rem;
@@ -242,7 +243,39 @@
 			setTimeout(function() {
 				$('#PS3').after('<span class="typed-cursor">|</span>'); // typed cursor
 			}, 6300)
+
+			browserFix()
 		});
+
+		_browser = null;
+
+		function browser() {
+			if (_browser !== null) return _browser; // cache
+
+			if ((!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) {
+				_browser = 'opera'
+			} else if (typeof InstallTrigger !== 'undefined') {
+				_browser = 'firefox'
+			} else if (!!window.chrome && !!window.chrome.webstore) {
+				_browser = 'chrome'
+			} else if (navigator.userAgent.toLowerCase().indexOf('safari') != -1) {
+				_browser = 'safari'
+			} else {
+				_browser = 'unknown'
+			}
+			return _browser
+		}
+
+		function browserFix() {
+			if (browser() == 'chrome') {
+				$('.active').css('margin-left', '-0.2rem')
+				setTimeout(function() {
+					$('.active').css('opacity', '1')
+				}, 1000)
+			} else if (browser() == 'safari') {
+				$('.active').css('opacity', '1')
+			}
+		}
 	</script>
 </head>
 
