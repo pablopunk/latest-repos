@@ -110,7 +110,6 @@
 		}
 
 		.dock-icon img:hover + .active {
-			opacity: 0;
 			transition: 0.01s;
 		}
 
@@ -245,9 +244,11 @@
 			}, 6300)
 
 			browserFix()
+			bindEvents()
 		});
 
 		_browser = null;
+		_active = true
 
 		function browser() {
 			if (_browser !== null) return _browser; // cache
@@ -272,8 +273,23 @@
 				setTimeout(function() {
 					$('.active').css('opacity', '1')
 				}, 1000)
-			} else if (browser() == 'safari' || browser() == 'firefox') {
+			} else if (browser() == 'safari') {
 				$('.active').css('opacity', '1')
+			} else {
+				_active = false
+			}
+		}
+
+		function bindEvents() {
+			if (_active) {
+				$('.dock-icon img').mouseover(function() {
+					$(this).siblings('.active').css('transition', '0s')
+					$(this).siblings('.active').css('opacity', '0')
+				})
+				$('.dock-icon img').mouseout(function() {
+					$(this).siblings('.active').css('transition', '1s')
+					$(this).siblings('.active').css('opacity', '1')
+				})
 			}
 		}
 	</script>
