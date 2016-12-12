@@ -184,8 +184,8 @@
 	<script src="typed.js"></script>
 	<script type="text/javascript">
 		var ps1 = '<span class="user">you</span><span class="machine">@pablopunk.com$</span> ';
-		var cmd = '^1300ls -a1';
-		var links = '^2000<a class="dir" href="http://pablopunk.com" title="here">./</a>\
+		var cmd = '^500ls -a1';
+		var links = '^1000<a class="dir" href="http://pablopunk.com" title="here">./</a>\
 			<a class="dir" href="https://github.com/pablopunk/pablopunk.com" title="up">../</a>\
 			<a class="dir" href="https://pablopunk.github.io/chronocube" title="chronocube">My app/</a>\
 			<a class="dir" href="https://github.com/pablopunk" title="github">My code/</a>\
@@ -194,22 +194,22 @@
 			<a class="dir" href="https://youtube.com/pablopunk" title="youtube">My videos/</a>\
 			<a class="file" href="./copyright.txt" title="copyright">copyright.txt</a>\
 			<a class="file" href="./help.txt" title="help">help.txt</a>'
-		var ps2 = '^3500'+ps1;
-		var cmd2 = '^4800cat help.txt';
-		var cat = '^5600\
+		var ps2 = '^2100'+ps1;
+		var cmd2 = '^2500cat help.txt';
+		var cat = '^3500\
 					Click on a folder or file to open it';
-		var ps3 = '^6000'+ps1;
+		var ps3 = '^3900'+ps1;
 
 		$(document).ready(function() {
 			// prompt
 			$('#PS1').typed({
 				strings: [ps1],
-				typeSpeed: 0
+				typeSpeed: -100
 			});
 			// command
 			$('#cmd').typed({
 				strings: [cmd],
-				typeSpeed: 0
+				typeSpeed: 20
 			});
 			// links
 			$('#links').typed({
@@ -219,12 +219,12 @@
 			// new prompt
 			$('#PS2').typed({
 				strings: [ps2],
-				typeSpeed: 0
+				typeSpeed: -100
 			});
 			// new  command
 			$('#cmd2').typed({
 				strings: [cmd2],
-				typeSpeed: 0
+				typeSpeed: 30
 			});
 			// help file
 			$('#cat').typed({
