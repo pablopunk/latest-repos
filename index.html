@@ -2,302 +2,312 @@
 <html lang="en">
 
 <head>
-	<!-- Basic Page Needs
+  <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<meta charset="utf-8">
-	<title>pablopunk$</title>
-	<meta name="description" content="Pablo Varela's personal website">
-	<meta name="author" content="Pablo Varela">
+  <meta charset="utf-8">
+  <title>pablopunk$</title>
+  <meta name="description" content="Pablo Varela's personal website">
+  <meta name="author" content="Pablo Varela">
 
-	<!-- jQuery and jQuery-UI
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-	<!-- Mobile Specific Metas
+  <!-- jQuery and jQuery-UI
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
-	<!-- CSS
+  <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<style type="text/css">
-		body {
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			background-color: black;
-			color: white;
-			font-family: Monospace;
-		}
-		
-		#content {
-            margin-top: 10%;
-			width: 90%;
-            background: url('./images/terminal.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding: 1rem; 
-            width: 70vw;
-            height: 60vh;
-            border-radius: 5px 5px 2px 2px;
-            text-align: left;
-            overflow: hidden;
-		}
-		
-		a.dir {
-			display: block;
-			text-decoration: none;
-			color: #36D7B7;
-		}
-		
-		a.dir:hover {
-			color: rgb(0%, 70%, 90%);
-		}
-		
-		a:visited {
-			text-decoration: none;
-		}
-		
-		a.file {
-			display: block;
-			text-decoration: none;
-			color: #F62459;
-		}
-		
-		a.file:hover {
-			color: rgb(0%, 70%, 90%);
-		}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		#dock-container {
-			position: fixed;
-			display: inline-block;
-			width: 100%;
-			height: 3rem;
-			bottom: 0;
-		}
-
-		#dock {
-			height: 100%;
-			width: 16rem;
-			background-color: #2c2c2c;
-			margin: auto;
-			border-radius: 4px 4px 0 0;
-			text-align: center;
-		}
-
-		.dock-icon {
-			width: 3.5rem;
-			height: 3.5rem;
-			margin: auto;
-			display: inline-block;
-		}
-
-		.dock-icon img {
-			width: 100%;
-			margin-top: -0.7rem;
-			transition: 0.2s;
-		}
-
-		.dock-icon img:hover {
-			filter: brightness(150%);
-			width: 4.5rem;
-			margin-top: -1.2rem;
-			margin-left: -0.5rem;
-			cursor: pointer;
-			transition: 0.2s;
-		}
-
-		.dock-icon img:hover + .active {
-			transition: 0.01s;
-		}
-
-		.active {
-			background-color: white;
-			position: absolute;
-			opacity: 0;
-			display: inline-block;
-			width: 0.3rem;
-			height: 0.3rem;
-			border-radius: 20px;
-			bottom: 0;
-			margin-left: -2rem;
-			overflow: hidden;
-			transition: 1s;
-		}
-		
-		.typed-cursor {
-			opacity: 1;
-			-webkit-animation: blink 0.7s infinite;
-			-moz-animation: blink 0.7s infinite;
-			animation: blink 0.7s infinite;
-		}
-
-		#cat {
-			color: #FFB61E;
-		}
-
-        .user, .machine{
-            color: #89C4F4;
-        }
-		
-		@keyframes blink {
-			0% {
-				opacity: 1;
-			}
-			50% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
-		}
-		
-		@-webkit-keyframes blink {
-			0% {
-				opacity: 1;
-			}
-			50% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
-		}
-		
-		@-moz-keyframes blink {
-			0% {
-				opacity: 1;
-			}
-			50% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
-		}
-	</style>
-
-	<!-- JS
+  <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<script src="typed.js"></script>
-	<script type="text/javascript">
-		var ps1 = '<span class="user">you</span><span class="machine">@pablopunk.com$</span> ';
-		var cmd = '^500ls -a1';
-		var links = '^1000<a class="dir" href="http://pablopunk.com" title="here">./</a>\
-			<a class="dir" href="https://github.com/pablopunk/pablopunk.com" title="up">../</a>\
-			<a class="dir" href="https://pablopunk.github.io/chronocube" title="chronocube">My app/</a>\
-			<a class="dir" href="https://github.com/pablopunk" title="github">My code/</a>\
-			<a class="dir" href="https://www.pexels.com/u/pablopunk" title="flickr">My pictures/</a>\
-			<a class="dir" href="https://twitter.com/pablopunk" title="twitter">My texts/</a>\
-			<a class="dir" href="https://youtube.com/pablopunk" title="youtube">My videos/</a>\
-			<a class="file" href="./copyright.txt" title="copyright">copyright.txt</a>\
-			<a class="file" href="./help.txt" title="help">help.txt</a>'
-		var ps2 = '^2100'+ps1;
-		var cmd2 = '^2500cat help.txt';
-		var cat = '^3500\
-					Click on a folder or file to open it';
-		var ps3 = '^3900'+ps1;
+  <style type="text/css">
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Monospace;
+    }
+    
+    #content {
+      margin-top: 10%;
+      width: 90%;
+      background: url('./images/terminal.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 1rem; 
+      width: 50rem;
+      height: 30rem;
+      border-radius: 5px 5px 2px 2px;
+      text-align: left;
+      overflow: hidden;
+    }
+    
+    a.dir {
+      display: block;
+      text-decoration: none;
+      color: #36D7B7;
+    }
+    
+    a.dir:hover {
+      color: rgb(0%, 70%, 90%);
+    }
+    
+    a:visited {
+      text-decoration: none;
+    }
+    
+    a.file {
+      display: block;
+      text-decoration: none;
+      color: #F62459;
+    }
+    
+    a.file:hover {
+      color: rgb(0%, 70%, 90%);
+    }
 
-		$(document).ready(function() {
-			// prompt
-			$('#PS1').typed({
-				strings: [ps1],
-				typeSpeed: -100
-			});
-			// command
-			$('#cmd').typed({
-				strings: [cmd],
-				typeSpeed: 20
-			});
-			// links
-			$('#links').typed({
-				strings: [links],
-				typeSpeed: -100
-			});
-			// new prompt
-			$('#PS2').typed({
-				strings: [ps2],
-				typeSpeed: -100
-			});
-			// new  command
-			$('#cmd2').typed({
-				strings: [cmd2],
-				typeSpeed: 30
-			});
-			// help file
-			$('#cat').typed({
-				strings: [cat],
-				typeSpeed: -100
-			});
-			// new prompt
-			$('#PS3').typed({
-				strings: [ps3],
-				typeSpeed: -100
-			});
+    #dock-container {
+      position: fixed;
+      display: inline-block;
+      width: 100%;
+      height: 3rem;
+      bottom: 0;
+    }
 
-			$('.typed-cursor').remove(); // remove cursor
+    #dock {
+      height: 100%;
+      width: 16rem;
+      background-color: #2c2c2c;
+      margin: auto;
+      border-radius: 4px 4px 0 0;
+      text-align: center;
+    }
 
-			setTimeout(function() {
-				$('#PS3').after('<span class="typed-cursor">|</span>'); // typed cursor
-			}, 4300)
+    .dock-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin: auto;
+      display: inline-block;
+    }
 
-			browserFix()
-			bindEvents()
-		});
+    .dock-icon img {
+      width: 100%;
+      margin-top: -0.7rem;
+      transition: 0.2s;
+    }
 
-		_browser = null;
-		_active = true
+    .dock-icon img:hover {
+      filter: brightness(150%);
+      width: 4.5rem;
+      margin-top: -1.2rem;
+      margin-left: -0.5rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
 
-		function browser() {
-			if (_browser !== null) return _browser; // cache
+    .dock-icon img:hover + .active {
+      transition: 0.01s;
+    }
 
-			if ((!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) {
-				_browser = 'opera'
-			} else if (typeof InstallTrigger !== 'undefined') {
-				_browser = 'firefox'
-			} else if (!!window.chrome && !!window.chrome.webstore) {
-				_browser = 'chrome'
-			} else if (navigator.userAgent.toLowerCase().indexOf('safari') != -1) {
-				_browser = 'safari'
-			} else {
-				_browser = 'unknown'
-			}
-			return _browser
-		}
+    .active {
+      background-color: white;
+      position: absolute;
+      opacity: 0;
+      display: inline-block;
+      width: 0.3rem;
+      height: 0.3rem;
+      border-radius: 20px;
+      bottom: 0;
+      margin-left: -2rem;
+      overflow: hidden;
+      transition: 1s;
+    }
+    
+    .typed-cursor {
+      opacity: 1;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+    }
 
-		function browserFix() {
-			if (browser() == 'chrome') {
-				$('.active').css('margin-left', '-0.2rem')
-				setTimeout(function() {
-					$('.active').css('opacity', '1')
-				}, 1000)
-			} else if (browser() == 'safari') {
-				$('.active').css('opacity', '1')
-			} else {
-				_active = false
-			}
-		}
+    #cat {
+      color: #FFB61E;
+    }
 
-		function bindEvents() {
-			if (_active) {
-				$('.dock-icon img').mouseover(function() {
-					$(this).siblings('.active').css('transition', '0s')
-					$(this).siblings('.active').css('opacity', '0')
-				})
-				$('.dock-icon img').mouseout(function() {
-					$(this).siblings('.active').css('transition', '1s')
-					$(this).siblings('.active').css('opacity', '1')
-				})
-			}
-		}
-	</script>
+    .user, .machine{
+        color: #89C4F4;
+    }
+    
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @-webkit-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @-moz-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="typed.js"></script>
+  <script type="text/javascript">
+    var ps1 = '<span class="user">you</span><span class="machine">@pablopunk.com$</span> ';
+    var cmd = '^500ls -a1';
+    var links = '^1000<a class="dir" href="http://pablopunk.com" title="here">./</a>\
+      <a class="dir" href="https://github.com/pablopunk/pablopunk.com" title="up">../</a>\
+      <a class="dir" href="https://pablopunk.github.io/chronocube" title="chronocube">My app/</a>\
+      <a class="dir" href="https://github.com/pablopunk" title="github">My code/</a>\
+      <a class="dir" href="https://www.pexels.com/u/pablopunk" title="flickr">My pictures/</a>\
+      <a class="dir" href="https://twitter.com/pablopunk" title="twitter">My texts/</a>\
+      <a class="dir" href="https://youtube.com/pablopunk" title="youtube">My videos/</a>\
+      <a class="file" href="./copyright.txt" title="copyright">copyright.txt</a>\
+      <a class="file" href="./help.txt" title="help">help.txt</a>'
+    var ps2 = '^2100'+ps1;
+    var cmd2 = '^2500cat help.txt';
+    var cat = '^3500\
+          Click on a folder or file to open it';
+    var ps3 = '^3900'+ps1;
+
+    $(document).ready(function() {
+      // prompt
+      $('#PS1').typed({
+        strings: [ps1],
+        typeSpeed: -100
+      });
+      // command
+      $('#cmd').typed({
+        strings: [cmd],
+        typeSpeed: 20
+      });
+      // links
+      $('#links').typed({
+        strings: [links],
+        typeSpeed: -100
+      });
+      // new prompt
+      $('#PS2').typed({
+        strings: [ps2],
+        typeSpeed: -100
+      });
+      // new  command
+      $('#cmd2').typed({
+        strings: [cmd2],
+        typeSpeed: 30
+      });
+      // help file
+      $('#cat').typed({
+        strings: [cat],
+        typeSpeed: -100
+      });
+      // new prompt
+      $('#PS3').typed({
+        strings: [ps3],
+        typeSpeed: -100
+      });
+
+      $('.typed-cursor').remove(); // remove cursor
+
+      setTimeout(function() {
+        $('#PS3').after('<span class="typed-cursor">|</span>'); // typed cursor
+      }, 4300)
+
+      if (isMobile()) {
+        $('#content').css('background', 'none')
+        $('#content').css('font-size', '.6rem')
+      }
+
+      browserFix()
+      bindEvents()
+    });
+
+    _browser = null;
+    _active = true
+
+    function browser() {
+      if (_browser !== null) return _browser; // cache
+
+      if ((!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) {
+        _browser = 'opera'
+      } else if (typeof InstallTrigger !== 'undefined') {
+        _browser = 'firefox'
+      } else if (!!window.chrome && !!window.chrome.webstore) {
+        _browser = 'chrome'
+      } else if (navigator.userAgent.toLowerCase().indexOf('safari') != -1) {
+        _browser = 'safari'
+      } else {
+        _browser = 'unknown'
+      }
+      return _browser
+    }
+
+    function browserFix() {
+      if (browser() == 'chrome') {
+        $('.active').css('margin-left', '-0.2rem')
+        setTimeout(function() {
+          $('.active').css('opacity', '1')
+        }, 1000)
+      } else if (browser() == 'safari') {
+        $('.active').css('opacity', '1')
+      } else {
+        _active = false
+      }
+    }
+
+    function bindEvents() {
+      if (_active) {
+        $('.dock-icon img').mouseover(function() {
+          $(this).siblings('.active').css('transition', '0s')
+          $(this).siblings('.active').css('opacity', '0')
+        })
+        $('.dock-icon img').mouseout(function() {
+          $(this).siblings('.active').css('transition', '1s')
+          $(this).siblings('.active').css('opacity', '1')
+        })
+      }
+    }
+
+    function isMobile() {
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) return true;
+      return false;
+    }
+  </script>
 </head>
 
 <body>
 
-	<center>
+  <center>
         <div id="content">
             <p class="prompt"><span id="PS1"></span><span id="cmd"></span></p>
             <div id="links"></div>
@@ -305,25 +315,25 @@
             <div id="cat"></div>
             <p class="prompt"><span id="PS3"></span></p>
         </div>
-	</center>
+  </center>
 
-	<div id="dock-container">
-		<div id="dock">
-			<div class="dock-icon">
-				<img src="images/finder-icon.png" alt="finder icon"/>
-				<div class="active"></div>
-			</div>
-			<div class="dock-icon">
-				<img src="images/terminal-icon.png" alt="terminal icon" onclick="location.reload()"/>
-				<div class="active"></div>
-			</div>
-			<div class="dock-icon">
-				<img src="images/github-icon.png" alt="github icon" onclick="window.open('https://github.com/pablopunk')"/>
-			</div>
-			<div class="dock-icon">
-				<img src="images/atom-icon.png" alt="atom icon" onclick="window.open('https://github.com/pablopunk/pablopunk.github.io/blob/master/index.html')"/>
-			</div>
-    	</div>
+  <div id="dock-container">
+    <div id="dock">
+      <div class="dock-icon">
+        <img src="images/finder-icon.png" alt="finder icon"/>
+        <div class="active"></div>
+      </div>
+      <div class="dock-icon">
+        <img src="images/terminal-icon.png" alt="terminal icon" onclick="location.reload()"/>
+        <div class="active"></div>
+      </div>
+      <div class="dock-icon">
+        <img src="images/github-icon.png" alt="github icon" onclick="window.open('https://github.com/pablopunk')"/>
+      </div>
+      <div class="dock-icon">
+        <img src="images/atom-icon.png" alt="atom icon" onclick="window.open('https://github.com/pablopunk/pablopunk.github.io/blob/master/index.html')"/>
+      </div>
+      </div>
     </div>
 
 </body>
