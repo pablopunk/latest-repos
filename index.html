@@ -1,341 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>pablopunk$</title>
-  <meta name="description" content="Pablo Varela's personal website">
-  <meta name="author" content="Pablo Varela">
-
-  <!-- jQuery and jQuery-UI
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <style type="text/css">
-    body {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      color: white;
-      font-family: Monospace;
-    }
-    
-    #content {
-      margin-top: 10%;
-      width: 90%;
-      background: url('./images/terminal.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 1rem; 
-      width: 50rem;
-      height: 30rem;
-      border-radius: 5px 5px 2px 2px;
-      text-align: left;
-      overflow: hidden;
-    }
-    
-    a.dir {
-      display: block;
-      text-decoration: none;
-      color: #36D7B7;
-    }
-    
-    a.dir:hover {
-      color: rgb(0%, 70%, 90%);
-    }
-    
-    a:visited {
-      text-decoration: none;
-    }
-    
-    a.file {
-      display: block;
-      text-decoration: none;
-      color: #F62459;
-    }
-    
-    a.file:hover {
-      color: rgb(0%, 70%, 90%);
-    }
-
-    #dock-container {
-      position: fixed;
-      display: inline-block;
-      width: 100%;
-      height: 3rem;
-      bottom: 0;
-    }
-
-    #dock {
-      height: 100%;
-      width: 16rem;
-      background-color: #2c2c2c;
-      margin: auto;
-      border-radius: 4px 4px 0 0;
-      text-align: center;
-    }
-
-    .dock-icon {
-      width: 3.5rem;
-      height: 3.5rem;
-      margin: auto;
-      display: inline-block;
-    }
-
-    .dock-icon img {
-      width: 100%;
-      margin-top: -0.7rem;
-      transition: 0.2s;
-    }
-
-    .dock-icon img:hover {
-      filter: brightness(150%);
-      width: 4.5rem;
-      margin-top: -1.2rem;
-      margin-left: -0.5rem;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .dock-icon img:hover + .active {
-      transition: 0.01s;
-    }
-
-    .active {
-      background-color: white;
-      position: absolute;
-      opacity: 0;
-      display: inline-block;
-      width: 0.3rem;
-      height: 0.3rem;
-      border-radius: 20px;
-      bottom: 0;
-      margin-left: -2rem;
-      overflow: hidden;
-      transition: 1s;
-    }
-    
-    .typed-cursor {
-      opacity: 1;
-      -webkit-animation: blink 0.7s infinite;
-      -moz-animation: blink 0.7s infinite;
-      animation: blink 0.7s infinite;
-    }
-
-    #cat {
-      color: #FFB61E;
-    }
-
-    .user, .machine{
-        color: #89C4F4;
-    }
-    
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    
-    @-webkit-keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    
-    @-moz-keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  </style>
-
-  <!-- JS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="typed.js"></script>
-  <script type="text/javascript">
-    var ps1 = '<span class="user">you</span><span class="machine">@pablopunk.com$</span> ';
-    var cmd = '^500ls -a1';
-    var links = '^1000<a class="dir" href="http://pablopunk.com" title="here">./</a>\
-      <a class="dir" href="https://github.com/pablopunk/pablopunk.com" title="up">../</a>\
-      <a class="dir" href="https://pablo.life/apps" title="chronocube">My apps/</a>\
-      <a class="dir" href="https://github.com/pablopunk" title="github">My code/</a>\
-      <a class="dir" href="https://www.pexels.com/u/pablopunk" title="flickr">My pictures/</a>\
-      <a class="dir" href="https://twitter.com/pablopunk" title="twitter">My texts/</a>\
-      <a class="dir" href="https://youtube.com/pablopunk" title="youtube">My videos/</a>\
-      <a class="file" href="./copyright.txt" title="copyright">copyright.txt</a>\
-      <a class="file" href="./help.txt" title="help">help.txt</a>'
-    var ps2 = '^2100'+ps1;
-    var cmd2 = '^2500cat help.txt';
-    var cat = '^3500\
-          Click on a folder or file to open it';
-    var ps3 = '^3900'+ps1;
-
-    $(document).ready(function() {
-      // prompt
-      $('#PS1').typed({
-        strings: [ps1],
-        typeSpeed: -100
-      });
-      // command
-      $('#cmd').typed({
-        strings: [cmd],
-        typeSpeed: 20
-      });
-      // links
-      $('#links').typed({
-        strings: [links],
-        typeSpeed: -100
-      });
-      // new prompt
-      $('#PS2').typed({
-        strings: [ps2],
-        typeSpeed: -100
-      });
-      // new  command
-      $('#cmd2').typed({
-        strings: [cmd2],
-        typeSpeed: 30
-      });
-      // help file
-      $('#cat').typed({
-        strings: [cat],
-        typeSpeed: -100
-      });
-      // new prompt
-      $('#PS3').typed({
-        strings: [ps3],
-        typeSpeed: -100
-      });
-
-      $('.typed-cursor').remove(); // remove cursor
-
-      setTimeout(function() {
-        $('#PS3').after('<span class="typed-cursor">|</span>'); // typed cursor
-      }, 4300)
-
-      if (isMobile()) {
-        $('#content').css('background', 'none')
-        $('#content').css('font-size', '.6rem')
-      }
-
-      browserFix()
-      bindEvents()
-    });
-
-    _browser = null;
-    _active = true
-
-    function browser() {
-      if (_browser !== null) return _browser; // cache
-
-      if ((!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) {
-        _browser = 'opera'
-      } else if (typeof InstallTrigger !== 'undefined') {
-        _browser = 'firefox'
-      } else if (!!window.chrome && !!window.chrome.webstore) {
-        _browser = 'chrome'
-      } else if (navigator.userAgent.toLowerCase().indexOf('safari') != -1) {
-        _browser = 'safari'
-      } else {
-        _browser = 'unknown'
-      }
-      return _browser
-    }
-
-    function browserFix() {
-      if (browser() == 'chrome') {
-        $('.active').css('margin-left', '-0.2rem')
-        setTimeout(function() {
-          $('.active').css('opacity', '1')
-        }, 1000)
-      } else if (browser() == 'safari') {
-        $('.active').css('opacity', '1')
-      } else {
-        _active = false
-      }
-    }
-
-    function bindEvents() {
-      if (_active) {
-        $('.dock-icon img').mouseover(function() {
-          $(this).siblings('.active').css('transition', '0s')
-          $(this).siblings('.active').css('opacity', '0')
-        })
-        $('.dock-icon img').mouseout(function() {
-          $(this).siblings('.active').css('transition', '1s')
-          $(this).siblings('.active').css('opacity', '1')
-        })
-      }
-    }
-
-    function isMobile() {
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) return true;
-      return false;
-    }
-  </script>
+  <!-- SEO -->
+  <title>Pablo Varela | Full Stack Web Developer</title>
+  <meta name="description" content="Soy un programador apasionado del desarrollo web, el open source, y la tecnología en general. Además soy un trabajador remoto, actualmente viviendo en Galicia, España." />
+  <meta rel="canonical" href="http://pablopunk.com/full-responsive-profile" />
+  <meta name="keywords" content="web, developer, programador, trabajador, remoto, full, stack" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pablopunk" />
+  <meta name="twitter:title" content="Pablo Varela | Web Developer" />
+  <meta name="twitter:description" content="Soy un programador apasionado del desarrollo web, el open source, y la tecnología en general. Además soy un trabajador remoto, actualmente viviendo en Galicia, España." />
+  <meta name="twitter:image" content="https://pablopunk.com/full-responsive-profile/images/site-image.jpg" />
+  <!-- OGP -->
+  <meta property="og:title" content="Pablo Varela | Web Developer" />
+  <meta property="og:description" content="Soy un programador apasionado del desarrollo web, el open source, y la tecnología en general. Además soy un trabajador remoto, actualmente viviendo en Galicia, España." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pablopunk.com/full-responsive-profile" />
+  <meta property="og:image" content="https://pablopunk.com/full-responsive-profile/images/site-image.jpg" />
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Pacifico|Material+Icons|Hind+Siliguri:300" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
-
 <body>
-
-  <center>
-        <div id="content">
-            <p class="prompt"><span id="PS1"></span><span id="cmd"></span></p>
-            <div id="links"></div>
-            <p class="prompt"><span id="PS2"></span><span id="cmd2"></span></p>
-            <div id="cat"></div>
-            <p class="prompt"><span id="PS3"></span></p>
+  <nav class="navbar">
+    <div class="toggle-navigation"><i class="material-icons">menu</i></div>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#quien-soy">Quién Soy</a></li>
+      <li><a href="#estudios">Estudios</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#peliculas">Películas</a></li>
+    </ul>
+  </nav>
+  <header>
+    <div class="header-image"></div>
+    <h1 class="header-title">Pablo Varela<br>Developer</h1>
+  </header> <main>
+    <section id="quien-soy">
+      <h2 class="section-title">Quién soy</h2>
+      <div class="section-content">
+        <img src="./images/me.png" alt="Pablo Varela">
+        <div class="info">
+          <p>Mi nombre es Pablo y soy desarrollador web.</p>
+          <p><del>Vivo en Marquette, Michigan (U.S.A).</del></p>
+          <p>Vivo en Santiago de Compostela, Galicia (España).</p>
+          <p>Estoy casado con un ordenador</p>
         </div>
-  </center>
-
-  <div id="dock-container">
-    <div id="dock">
-      <div class="dock-icon">
-        <img src="images/finder-icon.png" alt="finder icon"/>
-        <div class="active"></div>
       </div>
-      <div class="dock-icon">
-        <img src="images/terminal-icon.png" alt="terminal icon" onclick="location.reload()"/>
-        <div class="active"></div>
+    </section>
+    <section id="estudios">
+      <h2 class="section-title">Estudios</h2>
+      <ul>
+        <li>
+          <span class="education-title">Grao en Enxeñaría Informática (USC)</span>
+          <span class="education-date">2011-2017</span>
+        </li>
+        <li>
+          <span class="education-title">Curso de desarrollo de aplicaciones móviles con HTML5</span>
+          <span class="education-date">2013</span>
+        </li>
+        <li>
+          <span class="education-title">Curso de desarrollo de aplicaciones iOS con Objective-C</span>
+          <span class="education-date">2015</span>
+        </li>
+        <li>
+          <span class="education-title">Curso de Inglés nivel C1</span>
+          <span class="education-date">2016</span>
+        </li>
+        <li>
+          <span class="education-title">Curso de fotografía</span>
+          <span class="education-date">2015</span>
+        </li>
+      </ul>
+    </section>
+    <section id="experiencia">
+      <h2 class="section-title">Experiencia</h2>
+      <ul>
+        <li>
+          <span class="experiencia-title">Full Stack Web Developer <small>en Stang Decision Systems</small></span>
+          <a href="https://www.google.com/maps?q=Marquette,+Michigan" class="experiencia-location"><i class="material-icons md-18">location_on</i> Marquette, Michigan</a>
+          <span class="experiencia-date">2016-2018</span>
+        </li>
+        <li>
+          <span class="experiencia-title">Senior Web Developer <small>en Sourcefabric</small></span>
+          <a href="" class="experiencia-location"><i class="material-icons md-18">location_on</i> Remote</a>
+          <span class="experiencia-date">2018-Presente</span>
+        </li>
+      </ul>
+    </section>
+    <section id="sobre-mi">
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="section-content">
+        <div class="info">
+          <p>Después de programar 8 horas al día, paso mi tiempo libre... Programando! Aunque a veces también hago:</p>
+          <ul>
+            <li>Fotografía</li>
+            <li>Diseño gráfico</li>
+            <li>Cubos de Rubik!</li>
+          </ul>
+        </div>
+        <div class="section-video">
+          <video width="550" height="300" loop autoplay muted>
+            <source type="video/mp4" src="https://cl.ly/050F2P2Y3X0F/rubik.mp4" />
+          </video>
+        </div>
       </div>
-      <div class="dock-icon">
-        <img src="images/github-icon.png" alt="github icon" onclick="window.open('https://github.com/pablopunk')"/>
+    </section>
+    <section id="contacto">
+      <h2 class="section-title">Contacto</h2>
+      <div class="section-content">
+        <ul>
+          <li><a href="mailto:pablovarela182@gmail.com">pablovarela182@gmail.com</a></li>
+          <li>(906) 123-5678</li>
+          <li><a href="https://twitter.com/pablopunk">@pablopunk</a></li>
+        </ul>
+        <div class="form-container">
+          <h3 class="form-title">Envíame un mensaje</h3>
+          <form id="contact-form">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <select name="conocido" id="select-conocido">
+              <option value="" selected disabled>¿Cómo me conociste?</option>
+              <option value="amigo">Por un amigo</option>
+              <option value="familiar">Por un familiar</option>
+              <option value="master">Por el master de keepcoding</option>
+              <option value="twitter">Por twitter</option>
+              <option value="otros">Otros</option>
+            </select>
+            <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
+            <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+            <button>Enviar</button>
+          </form>
+        </div>
       </div>
-      <div class="dock-icon">
-        <img src="images/atom-icon.png" alt="atom icon" onclick="window.open('https://github.com/pablopunk/pablopunk.github.io/blob/master/index.html')"/>
+    </section>
+    <section id="peliculas">
+      <h2 class="section-title">Películas</h2>
+      <div class="section-content">
+        <ul class="peliculas">
+        </ul>
+        <div class="form-container">
+          <h3 class="form-title">Recomiéndame una película</h3>
+          <form id="pelicula-form">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <select name="genero" id="genero" required>
+              <option value="" selected disabled>Género</option>
+              <option value="Accion">Accion</option>
+              <option value="Animacion">Animacion</option>
+              <option value="Ciencia Ficcion">Ciencia Ficcion</option>
+              <option value="Terror">Terror</option>
+              <option value="Otros">Otros</option>
+            </select>
+            <button>Enviar</button>
+          </form>
+        </div>
       </div>
-      </div>
-    </div>
-
+    </section>
+  </main>
+  <footer>
+    © 2017 Pablo Varela
+  </footer>
+  <!-- Navbar -->
+  <script src="./scripts/navbar.js"></script>
+  <script src="./scripts/contact.js"></script>
+  <script src="./scripts/movies.js"></script>
 </body>
-
 </html>

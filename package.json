@@ -1,0 +1,17 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "python server.py",
+    "build": "babel src --out-dir scripts",
+    "dev": "babel src -w --out-dir scripts"
+  },
+  "author": "Pablo Varela <pablovarela182@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "serve": "^6.0.2"
+  }
+}

@@ -1,8 +1,19 @@
-# Readme
-This is the source code repository of the personal website [www.pablopunk.com](http://www.pablopunk.com)
+# Full responsive profile
 
-## New design
+<p align="center">
+  HTML/CSS/JS responsive personal profile.
+</p>
 
-This version emulates a terminal using [Typed.js](http://www.mattboldt.com/demos/typed-js/) for animations.
+## Execute
 
-![shot](https://raw.githubusercontent.com/pablopunk/pablopunk.github.io/master/images/screenshot.gif)
+```js
+npm install 
+npm build
+npm start
+```
+
+## Develop
+
+```js
+npm run dev # start server with live transpiler
+```
