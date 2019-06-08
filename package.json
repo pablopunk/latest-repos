@@ -1,0 +1,44 @@
+{
+  "name": "pablopunk.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sick-colors": "^2.0.0"
+  },
+  "devDependencies": {
+    "husky": "*",
+    "prettier": "*",
+    "pretty-quick": "*"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export -o dist",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablopunk/pablopunk.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablopunk/pablopunk.github.io/issues"
+  },
+  "homepage": "https://github.com/pablopunk/pablopunk.github.io#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2
+  }
+}
