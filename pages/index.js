@@ -32,7 +32,7 @@ export default class extends React.Component {
           instead.
         </p>
         <h1>Latest projects on GitHub</h1>
-        {this.state.loading && (
+        {loading && (
           <p>
             <marquee>...</marquee>
             Loading
