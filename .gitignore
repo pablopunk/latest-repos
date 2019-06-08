@@ -1,12 +1,3 @@
-# Archivos a ignorar por git
 .DS_Store
-blog # carpeta solo en el server
-blog/**
-.htaccess
-apps/chronocube
-apps/update-app.sh
-owncloud
-chronocube
-phpmyadmin
-autodeploy
-.vscode
+node_modules
+.next
