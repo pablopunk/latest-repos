@@ -1,5 +1,12 @@
 {
   "version": 2,
+  "alias": "pablopunk.com",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
-  "alias": "pablopunk.com"
+  "routes": [
+    {
+      "src": "/(.+)",
+      "status": 301,
+      "headers": { "Location": "https://github.com/pablopunk/$1" }
+    }
+  ]
 }
