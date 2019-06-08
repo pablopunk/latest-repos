@@ -21,12 +21,12 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-        <style jsx global>
+        <style type="text/css">
           {`
             body {
               margin: 0;
               padding: 0;
-              font-family: 'SF Mono', Menlo, monospace;
+              font-family: Menlo, monospace;
               background-color: ${colors.background};
               color: ${colors.foreground};
             }
