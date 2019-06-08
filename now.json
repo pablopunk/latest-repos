@@ -1,8 +1,15 @@
 {
   "version": 2,
   "alias": "pablopunk.com",
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" },
+    { "src": "tinytwitch/index.html", "use": "@now/static" }
+  ],
   "routes": [
+    {
+      "src": "/tinytwitch",
+      "dest": "/tinytwitch/index.html"
+    },
     {
       "src": "/(.+)",
       "status": 301,
