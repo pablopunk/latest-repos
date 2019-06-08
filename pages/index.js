@@ -8,8 +8,6 @@ export default class extends React.Component {
     const res = await fetch('https://repos.pablopunk.now.sh')
     const repos = await res.json()
 
-    console.log(repos)
-
     return { repos: repos.reverse() }
   }
   render() {

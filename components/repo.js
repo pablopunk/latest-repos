@@ -3,12 +3,21 @@ import colors from 'sick-colors'
 export default ({
   repo: { name, description, url, primaryLanguage: lang }
 }) => {
+  lang = lang || { name: 'unknown', color: colors.black }
+
   return (
     <div>
       <article>
         <a href={url} className="title">
           <h2>{name}</h2>
-          {lang ? <small>({lang.name})</small> : <small>(unknown)</small>}
+          <small
+            style={{
+              color: lang.color,
+              border: `1px solid ${lang.color}`
+            }}
+          >
+            {lang.name}
+          </small>
         </a>
         <p>{description}</p>
       </article>
@@ -38,7 +47,8 @@ export default ({
           padding: 1em;
         }
         small {
-          color: ${colors.green};
+          padding: 2px 5px;
+          border-radius: 5px;
         }
         p {
           color: #c3c3c3;
