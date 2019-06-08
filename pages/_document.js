@@ -16,22 +16,22 @@ class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1"
           ></meta>
+          <style type="text/css">
+            {`
+              body {
+                margin: 0;
+                padding: 0;
+                font-family:  Menlo, monospace;
+                background-color: ${colors.background};
+                color: ${colors.foreground};
+              }
+            `}
+          </style>
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
-        <style type="text/css">
-          {`
-            body {
-              margin: 0;
-              padding: 0;
-              font-family: Menlo, monospace;
-              background-color: ${colors.background};
-              color: ${colors.foreground};
-            }
-          `}
-        </style>
       </Html>
     )
   }
