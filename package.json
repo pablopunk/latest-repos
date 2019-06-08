@@ -17,7 +17,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build && next export -o dist",
+    "build": "next build",
     "start": "next start"
   },
   "repository": {
