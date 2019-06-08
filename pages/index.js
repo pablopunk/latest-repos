@@ -3,26 +3,17 @@ import fetch from 'isomorphic-fetch'
 import colors from 'sick-colors'
 import Repo from '../components/repo'
 
-async function fetchRepos() {
-  const res = await fetch('https://repos.pablopunk.now.sh')
-  const repos = await res.json()
-
-  return repos.reverse()
-}
-
 export default class extends React.Component {
-  constructor(props) {
-    super(props)
+  static async getInitialProps() {
+    const res = await fetch('https://repos.pablopunk.now.sh')
+    const repos = await res.json()
 
-    this.state = { loading: true, repos: [] }
-  }
-  componentDidMount() {
-    if (!this.state.repos || this.state.repos.length === 0) {
-      fetchRepos().then(repos => this.setState({ repos, loading: false }))
-    }
+    console.log(repos)
+
+    return { repos: repos.reverse() }
   }
   render() {
-    const { repos = [], loading } = this.state
+    const { repos = [] } = this.props
 
     return (
       <div>
@@ -32,13 +23,6 @@ export default class extends React.Component {
           instead.
         </p>
         <h1>Latest projects on GitHub</h1>
-        {loading && (
-          <p>
-            <marquee>...</marquee>
-            Loading
-            <marquee>...</marquee>
-          </p>
-        )}
         <section>
           {repos.map((repo, i) => (
             <Repo key={i} repo={repo} />
