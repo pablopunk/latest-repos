@@ -22,8 +22,8 @@ export default class extends React.Component {
         </p>
         <h1>Latest projects on GitHub</h1>
         <section>
-          {repos.map((repo, i) => (
-            <Repo key={i} repo={repo} />
+          {repos.map(repo => (
+            <Repo key={repo.url} repo={repo} />
           ))}
         </section>
         <style jsx>{`
