@@ -13,7 +13,7 @@
     {
       "src": "/(.+)",
       "status": 301,
-      "headers": { "Location": "https://github.com/pablopunk/$1" }
+      "headers": { "Location": "https://godoc.now.sh/pablopunk/$1" }
     }
   ]
 }
