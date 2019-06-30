@@ -12,8 +12,7 @@
     },
     {
       "src": "/(.+)",
-      "status": 301,
-      "headers": { "Location": "https://godoc.now.sh/pablopunk/$1" }
+      "dest": "https://godoc.now.sh/pablopunk/$1"
     }
   ]
 }
