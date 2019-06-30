@@ -1,5 +1,5 @@
 {
-  "name": "pablopunk.github.io",
+  "name": "pablopunk.com",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,15 +22,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pablopunk/pablopunk.github.io.git"
+    "url": "git+https://github.com/pablopunk/pablopunk.com.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pablopunk/pablopunk.github.io/issues"
+    "url": "https://github.com/pablopunk/pablopunk.com/issues"
   },
-  "homepage": "https://github.com/pablopunk/pablopunk.github.io#readme",
+  "homepage": "https://github.com/pablopunk/pablopunk.com#readme",
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
