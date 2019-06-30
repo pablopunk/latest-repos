@@ -11,8 +11,16 @@
       "dest": "/tinytwitch/index.html"
     },
     {
+      "src": "/styles.css",
+      "dest": "https://godoc.now.sh/styles.css"
+    },
+    {
+      "src": "/dark.css",
+      "dest": "https://godoc.now.sh/dark.css"
+    },
+    {
       "src": "/(.+)",
-      "dest": "https://godoc.now.sh/pablopunk/$1"
+      "dest": "https://godoc.now.sh/pablopunk/$1?dark"
     }
   ]
 }
