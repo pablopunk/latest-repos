@@ -17,7 +17,7 @@ export default class extends React.Component {
       <div>
         <p>Welcome.</p>
         <p>
-          You can go to <a href="https://pablo.life">my personal website</a>{' '}
+          You can go to <a href="https://pablo.pink">my personal website</a>{' '}
           instead.
         </p>
         <h1>Latest projects on GitHub</h1>
