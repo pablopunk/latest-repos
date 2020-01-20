@@ -5,11 +5,12 @@ import Repo from '../components/repo'
 
 export default class extends React.Component {
   static async getInitialProps() {
-    const res = await fetch('https://repos.pablopunk.now.sh')
+    const res = await fetch('https://repos.pablopunk.com')
     const repos = await res.json()
 
     return { repos: repos.reverse() }
   }
+
   render() {
     const { repos = [] } = this.props
 
