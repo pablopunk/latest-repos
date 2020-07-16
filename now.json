@@ -12,15 +12,15 @@
     },
     {
       "src": "/styles.css",
-      "dest": "https://godoc.now.sh/styles.css"
+      "dest": "https://godoc.pablopunk.com/styles.css"
     },
     {
       "src": "/dark.css",
-      "dest": "https://godoc.now.sh/dark.css"
+      "dest": "https://godoc.pablopunk.com/dark.css"
     },
     {
       "src": "/(.+)",
-      "dest": "https://godoc.now.sh/pablopunk/$1?dark"
+      "dest": "https://godoc.pablopunk.com/pablopunk/$1?dark"
     }
   ]
 }
