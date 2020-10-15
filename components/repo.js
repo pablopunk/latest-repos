@@ -1,9 +1,33 @@
 import colors from 'sick-colors'
 
-export default ({
-  repo: { name, description, url, primaryLanguage: lang }
-}) => {
-  lang = lang || { name: 'unknown', color: colors.black }
+const getLanguageColor = lang => {
+  switch (lang.toLowerCase()) {
+    case 'unknown':
+      return colors.black
+    case 'typescript':
+      return colors.green
+    case 'javascript':
+      return colors.yellow
+    case 'shell':
+      return colors.cyan
+    case 'vim script':
+    case 'rust':
+      return colors.red
+    case 'html':
+      return colors.red
+    case 'python':
+    case 'scss':
+    case 'css':
+      return colors.blue
+    default:
+      return colors.black
+  }
+}
+
+export default ({ repo: { name, description, url, language: lang } }) => {
+  lang = lang || 'unknown'
+
+  const langColor = getLanguageColor(lang)
 
   return (
     <div>
@@ -12,11 +36,11 @@ export default ({
           <h2>{name}</h2>
           <small
             style={{
-              color: lang.color,
-              border: `1px solid ${lang.color}`
+              color: langColor,
+              border: `1px solid ${langColor}`
             }}
           >
-            {lang.name}
+            {lang}
           </small>
         </a>
         <p>{description}</p>

@@ -8,7 +8,7 @@ export default class extends React.Component {
     const res = await fetch('https://repos.pablopunk.com')
     const repos = await res.json()
 
-    return { repos: repos.reverse() }
+    return { repos }
   }
 
   render() {
@@ -18,7 +18,7 @@ export default class extends React.Component {
       <div>
         <p>Welcome.</p>
         <p>
-          You can go to <a href="https://pablo.im">my personal website</a>{' '}
+          You can go to <a href="https://pablopunk.com">my personal website</a>{' '}
           instead.
         </p>
         <h1>Latest projects on GitHub</h1>
