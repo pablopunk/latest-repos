@@ -1,1 +1,1 @@
-[latest.pablopunk.com](https://latest.pablopunk.com)
+[latest-repos.pablopunk.com](https://latest-repos.pablopunk.com)
