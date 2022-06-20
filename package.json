@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
-    "next": "^9.3.2",
+    "next": "^12.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sick-colors": "^2.0.0"
